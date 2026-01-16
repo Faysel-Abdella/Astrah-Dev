@@ -30,8 +30,10 @@ export default function Header() {
             <div className="hidden md:block">
               <LanguageToggle />
             </div>
-            <button className="hidden md:inline-block px-7 py-4 border-[1.5px] border-white text-white rounded-lg hover:bg-white/10 transition-colors font-gilroy font-medium text-sm">
-              {t("talkToAstrah")}
+            <button className="hidden md:inline-block px-7 py-4 border-[1.5px] border-white text-white rounded-lg hover:bg-white/10 transition-colors font-gilroy  text-sm">
+              {t.rich("talkToAstrah", {
+                bold: (chunk) => <span className="font-semibold">{chunk}</span>,
+              })}
             </button>
             <MobileMenu />
           </div>

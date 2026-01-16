@@ -3,15 +3,14 @@
     "product": "Product",
     "pricing": "Pricing",
     "migration": "Migration",
-    "talkToAstrah": "Talk to ASTRAH"
+    "talkToAstrah": "Talk to <bold>ASTRAH</bold>"
   },
   "hero": {
     "tagline": "THE BUSINESS OPERATING SYSTEM FOR THE GULF",
     "mainHeading": "Stop managing chaos.\nStart managing revenue.",
     "subHeading": "The AI-native OS built for WhatsApp-first sales teams.",
-    "buttonText": "Talk to ASTRAH",
-    "featureLabelPart1": "Not A CRM.",
-    "featureLabelPart2": "A System.",
+    "buttonText": "Talk to <bold>ASTRAH</bold>",
+    "featureLabel": "Not A CRM <highlight>A System.</highlight>",
     "featureText": "Built for how business actually happens across the GCC and MENA."
   },
   "features": {

@@ -7,7 +7,7 @@ export default function HeroSection() {
   const t = useTranslations("hero");
 
   return (
-    <section className="relative min-h-screen flex flex-col md:flex-row md:items-center overflow-hidden bg-background">
+    <section className="relative font-sf-pro min-h-screen flex flex-col md:flex-row md:items-center overflow-hidden bg-background">
       {/* Background gradient overlay */}
       {/* <div className="absolute inset-0 bg-gradient-to-b from-cyan-950/10 to-background pointer-events-none" /> */}
 
@@ -28,7 +28,7 @@ export default function HeroSection() {
 
             {/* Main Heading - 56px with 120% line height (no forced line breaks) */}
             <h1
-              className="text-3xl md:text-7xl  font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white"
+              className="text-3xl md:text-7xl ltr:max-w-4xl rtl:max-w-3xl  font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white"
               style={{ fontWeight: 400 }}
             >
               {t("mainHeading")}
@@ -41,29 +41,35 @@ export default function HeroSection() {
 
             {/* CTA Button */}
             <button
-              className="inline-block px-7 py-4 font-bold rounded-lg font-gilroy text-black md:border-0 transition-all hover:opacity-90 w-fit"
+              className="inline-block px-7 py-4  rounded-lg font-gilroy text-black md:border-0 transition-all hover:opacity-90 w-fit"
               style={{ backgroundColor: "#00B3C6" }}
             >
-              {t("buttonText")}
+              {t.rich("buttonText", {
+                bold: (chunk) => <span className="font-semibold">{chunk}</span>,
+              })}
             </button>
 
             {/* Feature Box - Desktop only */}
-            <div className="hidden md:block mt-16 border-s-4 ps-5 border-white max-w-md">
-              <p className="font-medium mb-2 text-white text-base">
-                {t("featureLabelPart1")}{" "}
-                <span style={{ color: "#00d4ff" }}>
-                  {t("featureLabelPart2")}
-                </span>
-              </p>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                {t("featureText")}
-              </p>
+            <div className="hidden md:flex   mt-16  max-w-md">
+              <div className=" flex-1 max-w-1 rounded-full bg-white"></div>
+              <div className="ps-5">
+                <p className="font-medium mb-2 text-white text-base">
+                  {t.rich("featureLabel", {
+                    highlight: (chunk) => (
+                      <span className="text-[#00B3C6]">{chunk}</span>
+                    ),
+                  })}
+                </p>
+                <p className="text-gray-400 text-sm leading-relaxed max-w-72">
+                  {t("featureText")}
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Right visual - anchored bottom-right */}
-          <div className="relative h-72 md:h-full flex items-end justify-end w-full md:-mr-16 lg:-mr-32 md:top-42 md:pb-0">
-            <div className="absolute bottom-0 right-0 w-full max-w-sm md:max-w-xl">
+          <div className="relative h-72 md:h-full flex items-end justify-end w-full md:ltr:-mr-16  lg:ltr:-mr-32  md:top-42 md:pb-0">
+            <div className="absolute bottom-0 ltr:right-0 rtl:left-0 w-full max-w-sm md:max-w-xl">
               {/* Glow effect */}
               <div
                 className="absolute inset-0 rounded-full filter blur-3xl opacity-40"
@@ -88,8 +94,11 @@ export default function HeroSection() {
         {/* Feature Box - Mobile only (below brain) */}
         <div className="md:hidden mt-8 border-s-4 ps-4 border-white">
           <p className="font-medium mb-2 text-white text-sm">
-            {t("featureLabelPart1")}{" "}
-            <span style={{ color: "#00d4ff" }}>{t("featureLabelPart2")}</span>
+            {t.rich("featureLabel", {
+              highlight: (chunk) => (
+                <span className="text-[#00B3C6]">{chunk}</span>
+              ),
+            })}
           </p>
           <p className="text-gray-400 text-xs leading-relaxed">
             {t("featureText")}
