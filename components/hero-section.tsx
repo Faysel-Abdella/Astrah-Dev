@@ -19,7 +19,7 @@ export default function HeroSection() {
             <div className="flex items-center gap-2.5 mb-7">
               <span className="inline-block w-1.5 h-1.5 md:w-1.5 md:h-1.5 bg-white rounded-full shrink-0" />
               <span
-                className="text-xs md:text-base text-white/80 font-normal font-sf-pro tracking-[0.44px] uppercase"
+                className="text-xs md:text-base text-white/80 font-light font-sf-pro tracking-[0.44px] uppercase"
                 style={{ letterSpacing: "4%" }}
               >
                 {t("tagline")}
@@ -27,15 +27,12 @@ export default function HeroSection() {
             </div>
 
             {/* Main Heading - 56px with 120% line height (no forced line breaks) */}
-            <h1
-              className="text-3xl md:text-7xl ltr:max-w-5xl rtl:max-w-3xl  font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white"
-              style={{ fontWeight: 400 }}
-            >
+            <h1 className="text-3xl md:text-7xl ltr:max-w-5xl rtl:max-w-3xl tracking-tight font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white">
               {t("mainHeading")}
             </h1>
 
             {/* Sub Heading - 16px with 160% line height */}
-            <p className="text-white/80 text-sm md:text-base font-normal mb-8 md:mb-10 md:leading-[160%] max-w-xl">
+            <p className="text-white/80 text-sm md:text-base font-light mb-8 md:mb-10 md:leading-[160%] max-w-xl">
               {t("subHeading")}
             </p>
 

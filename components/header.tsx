@@ -73,7 +73,9 @@ function MobileMenuPanel() {
           className="w-full mt-4 px-4 py-2.5 rounded-full font-medium transition-colors text-black"
           style={{ backgroundColor: "#00d4ff" }}
         >
-          {t("talkToAstrah")}
+          {t.rich("talkToAstrah", {
+            bold: (chunk) => <span className="font-semibold">{chunk}</span>,
+          })}
         </button>
       </nav>
     </div>
