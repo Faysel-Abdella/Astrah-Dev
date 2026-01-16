@@ -14,7 +14,7 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 pt-24 md:pt-32 pb-12 md:pb-20 relative z-10 w-full">
         <div className=" gap-8 items-center">
           {/* Left content */}
-          <div className="flex flex-col justify-center md:pr-4 relative z-20">
+          <div className="flex flex-col justify-center md:pr-4 relative z-20 ">
             {/* Tagline */}
             <div className="flex items-center gap-2.5 mb-7">
               <span className="inline-block w-1.5 h-1.5 md:w-1.5 md:h-1.5 bg-white rounded-full shrink-0" />
@@ -27,7 +27,7 @@ export default function HeroSection() {
             </div>
 
             {/* Main Heading - 56px with 120% line height (no forced line breaks) */}
-            <h1 className="text-3xl md:text-7xl ltr:max-w-5xl rtl:max-w-3xl tracking-tight font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white">
+            <h1 className="text-3xl md:text-5xl lg:text-7xl ltr:max-w-5xl rtl:max-w-3xl tracking-tight font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white">
               {t("mainHeading")}
             </h1>
 
@@ -47,7 +47,7 @@ export default function HeroSection() {
             </button>
 
             {/* Feature Box - Desktop only */}
-            <div className="hidden md:flex   mt-16  max-w-md">
+            <div className="hidden lg:flex   mt-16  max-w-md">
               <div className=" flex-1 max-w-1 rounded-full bg-white"></div>
               <div className="ps-5">
                 <p className="font-medium mb-2 text-white text-base">
@@ -65,8 +65,8 @@ export default function HeroSection() {
           </div>
 
           {/* Right visual - anchored bottom-right */}
-          <div className="relative h-72 md:h-full flex items-end justify-end w-full md:ltr:-mr-16  lg:ltr:-mr-32  md:top-42 md:pb-0">
-            <div className="absolute bottom-0 ltr:right-0 rtl:left-0 w-full max-w-sm md:max-w-xl">
+          <div className="relative h-72 lg:h-full flex items-end justify-end w-full lg:ltr:-mr-16  xl:ltr:-mr-32 top-10  lg:top-42 lg:pb-0">
+            <div className="absolute bottom-0 ltr:right-0 rtl:left-0 w-full max-w-sm lg:max-w-xl">
               {/* Brain visualization */}
               <div className="relative w-full  aspect-square rounded-full overflow-hidden">
                 <Image
@@ -83,7 +83,7 @@ export default function HeroSection() {
         </div>
 
         {/* Feature Box - Mobile only (below brain) */}
-        <div className="md:hidden mt-8 border-s-4 ps-4 border-white">
+        <div className="lg:hidden mt-8 border-s-4 ps-4 border-white">
           <p className="font-medium mb-2 text-white text-sm">
             {t.rich("featureLabel", {
               highlight: (chunk) => (

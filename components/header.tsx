@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 w-full z-50 bg-background border-b border-white/5 px-6 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto  py-4 md:py-5">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between ">
           {/* Left section */}
           <div className="flex items-center">
             <Logo />

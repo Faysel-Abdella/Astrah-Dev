@@ -6,7 +6,6 @@ import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 
 import type React from "react";
-import { LanguageWrapper } from "../components/language-wrapper";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -46,6 +45,16 @@ export const sfPro = localFont({
   variable: "--font-sf-pro",
   display: "swap",
 });
+export const sfArabic = localFont({
+  src: [
+    {
+      path: "./fonts/SF-Arabic.ttf",
+      style: "normal",
+    },
+  ],
+  variable: "--font-sf-arabic",
+  display: "swap",
+});
 
 export const gilroy = localFont({
   src: [
@@ -78,6 +87,7 @@ export const gilroy = localFont({
   variable: "--font-gilroy",
   display: "swap",
 });
+
 export const metadata: Metadata = {
   title: "ASTRAH OS - Business Operating System for the Gulf",
   description:
@@ -108,9 +118,12 @@ export default async function RootLayout({
 }>) {
   const locale = await getLocale();
   const messages = await getMessages();
+  const isRTL = locale === "ar";
 
+  console.log({ locale, isRTL });
+  const defaultFont = locale === "ar" ? sfArabic : sfPro;
   return (
-    <LanguageWrapper locale={locale}>
+    <html lang={locale} dir={isRTL ? "rtl" : "ltr"} suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#000000" />
         <meta
@@ -119,13 +132,13 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${poppins.variable} ${gilroy.variable} ${sfPro.variable} font-sans antialiased bg-black text-white`}
+        className={`${poppins.variable} ${gilroy.variable} ${defaultFont.className} font-sans antialiased  text-white`}
       >
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
         <Analytics />
       </body>
-    </LanguageWrapper>
+    </html>
   );
 }
