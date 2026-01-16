@@ -38,7 +38,7 @@ export default function HeroSection() {
             </button>
 
             {/* Feature Box */}
-            <div className="mt-16 border-s-4 ps-4" style={{ borderColor: "#00d4ff" }}>
+            <div className="mt-16 border-s-4 ps-4 border-white">
               <p className="font-medium mb-2 text-white">
                 {t("featureLabelPart1")} <span style={{ color: "#00d4ff" }}>{t("featureLabelPart2")}</span>
               </p>
