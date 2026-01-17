@@ -27,10 +27,10 @@ export default function HeroSection() {
             </div>
 
             {/* Main Heading - 56px with 120% line height (no forced line breaks) */}
-            <h1 className="text-3xl md:text-3xl lg:text-6xl ltr:max-w-5xl rtl:max-w-3xl tracking-tight font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white">
+            <h1 className="text-[1.67rem] md:text-[1.67rem] lg:text-[3.35rem] ltr:max-w-5xl rtl:max-w-3xl tracking-tight font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white">
               {t("mainHeading")}
             </h1>
-              <h1 className="-mt-8 max-md:-mt-6 text-3xl md:text-3xl lg:text-6xl ltr:max-w-5xl rtl:max-w-3xl tracking-tight font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white">
+              <h1 className="-mt-10 max-md:-mt-7 text-[1.67rem] md:text-[1.67rem] lg:text-[3.35rem] ltr:max-w-5xl rtl:max-w-3xl tracking-tight font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white">
               {t("mainHeading2")}
             </h1>
 
