@@ -27,8 +27,11 @@ export default function HeroSection() {
             </div>
 
             {/* Main Heading - 56px with 120% line height (no forced line breaks) */}
-            <h1 className="text-3xl md:text-5xl lg:text-7xl ltr:max-w-5xl rtl:max-w-3xl tracking-tight font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white">
+            <h1 className="text-3xl md:text-3xl lg:text-6xl ltr:max-w-5xl rtl:max-w-3xl tracking-tight font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white">
               {t("mainHeading")}
+            </h1>
+              <h1 className="-mt-8 max-md:-mt-6 text-3xl md:text-3xl lg:text-6xl ltr:max-w-5xl rtl:max-w-3xl tracking-tight font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white">
+              {t("mainHeading2")}
             </h1>
 
             {/* Sub Heading - 16px with 160% line height */}
@@ -65,25 +68,26 @@ export default function HeroSection() {
           </div>
 
           {/* Right visual - anchored bottom-right */}
-          <div className="relative h-72 lg:h-full flex items-end justify-end w-full lg:ltr:-mr-16  xl:ltr:-mr-32 top-10  lg:top-42 lg:pb-0">
-            <div className="absolute bottom-0 ltr:right-0 rtl:left-0 w-full max-w-sm lg:max-w-xl">
+          <div className="lg:relative h-36 lg:h-full w-full lg:ltr:-mr-16  xl:ltr:-mr-32 top-0  lg:top-15 lg:pb-0  max-lg:justify-center max-lg:items-center max-lg:flex max-lg:my-2">
+            <div className="lg:absolute lg:bottom-0 ltr:right-0 rtl:left-0 w-full max-w-44
+             lg:max-w-sm">
               {/* Brain visualization */}
-              <div className="relative w-full  aspect-square rounded-full overflow-hidden">
+              <div className="relative w-full aspect-square rounded-full overflow-hidden animate-pulse">
                 <Image
                   src="/brain.png"
                   alt="Neural network brain visualization"
                   fill
                   className="object-cover object-bottom opacity-75"
                   priority
-                  quality={100}
-                />
+                  quality={100} 
+                  />
               </div>
             </div>
           </div>
         </div>
 
         {/* Feature Box - Mobile only (below brain) */}
-        <div className="lg:hidden mt-8 border-s-4 ps-4 border-white">
+        <div className="lg:hidden border-s-4 ps-4 border-white">
           <p className="font-medium mb-2 text-white text-sm">
             {t.rich("featureLabel", {
               highlight: (chunk) => (
