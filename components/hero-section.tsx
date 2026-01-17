@@ -41,7 +41,7 @@ export default function HeroSection() {
 
             {/* CTA Button */}
             <button
-              className="inline-block px-7 py-4  rounded-lg font-gilroy text-black md:border-0 transition-all hover:opacity-90 w-fit"
+              className="cursor-pointer inline-block px-7 py-4  rounded-lg font-gilroy text-black md:border-0 transition-all hover:opacity-90 w-fit"
               style={{ backgroundColor: "#00B3C6" }}
             >
               {t.rich("buttonText", {

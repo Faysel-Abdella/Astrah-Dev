@@ -30,7 +30,7 @@ export default function Header() {
             <div className="hidden md:block">
               <LanguageToggle />
             </div>
-            <button className="hidden md:inline-block px-7 py-4 border-[1.5px] border-white text-white rounded-lg hover:bg-white/10 transition-colors font-gilroy  text-sm">
+            <button className="cursor-pointer hidden md:inline-block px-7 py-4 border-[1.5px] border-white text-white rounded-lg hover:bg-white/10 transition-colors font-gilroy  text-sm">
               {t.rich("talkToAstrah", {
                 bold: (chunk) => <span className="font-semibold">{chunk}</span>,
               })}
@@ -70,7 +70,7 @@ function MobileMenuPanel() {
           </a>
         ))}
         <button
-          className="w-full mt-4 px-4 py-2.5 rounded-full font-medium transition-colors text-black"
+          className="cursor-pointer w-full mt-4 px-4 py-2.5 rounded-full font-medium transition-colors text-black"
           style={{ backgroundColor: "#00d4ff" }}
         >
           {t.rich("talkToAstrah", {
