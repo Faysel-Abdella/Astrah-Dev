@@ -11,7 +11,7 @@ export default function HeroSection() {
       {/* Background gradient overlay */}
       {/* <div className="absolute inset-0 bg-gradient-to-b from-cyan-950/10 to-background pointer-events-none" /> */}
 
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 pt-24 md:pt-32 pb-12 md:pb-20 relative z-10 w-full">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 pt-24 md:pt-32  relative z-10 w-full">
         <div className=" gap-8 items-center">
           {/* Left content */}
           <div className="flex flex-col justify-center md:pr-4 relative z-20 ">

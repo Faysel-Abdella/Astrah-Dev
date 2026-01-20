@@ -7,9 +7,9 @@
   /* Updated all cyan colors to exact #00d4ff */
   --background: oklch(0.1683 0.0181 263.9);
   --foreground: #ffffff;
-  --card: oklch(1 0 0);
+  --card: oklch(0.2 0.0216 263.9);
   --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
+  --popover: oklch(0.2 0.0216 263.9);
   --popover-foreground: oklch(0.145 0 0);
   --primary: #00d4ff;
   --primary-foreground: #000000;
@@ -21,7 +21,7 @@
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: #00d4ff;
+  --border: oklch(0.2584 0.0191 258.36);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
   --chart-1: oklch(0.646 0.222 41.116);
