@@ -6,6 +6,7 @@ import FeatureShowcase from "@/components/feature-showcase";
 import MigrationCTA from "@/components/migration-cta";
 import PricingCTA from "@/components/pricing-cta";
 import BottomCTA from "@/components/bottom-cta";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <MigrationCTA />
       <PricingCTA />
       <BottomCTA />
+      <Footer />
     </main>
   );
 }
