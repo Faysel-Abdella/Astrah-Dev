@@ -7,11 +7,11 @@ export default function HeroSection() {
   const t = useTranslations("hero");
 
   return (
-    <section className="relative font-sf-pro min-h-screen flex flex-col md:flex-row md:items-center overflow-hidden bg-background">
+    <section className="section-container relative  font-sf-pro min-h-screen flex flex-col md:flex-row md:items-center overflow-hidden bg-background">
       {/* Background gradient overlay */}
       {/* <div className="absolute inset-0 bg-gradient-to-b from-cyan-950/10 to-background pointer-events-none" /> */}
 
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 pt-24 md:pt-32  relative z-10 w-full">
+      <div className="section-content  pt-24 md:pt-32  relative z-10 w-full">
         <div className=" gap-8 items-center">
           {/* Left content */}
           <div className="flex flex-col justify-center md:pr-4 relative z-20 ">
@@ -19,7 +19,7 @@ export default function HeroSection() {
             <div className="flex items-center gap-2.5 mb-7">
               <span className="inline-block w-1.5 h-1.5 md:w-1.5 md:h-1.5 bg-white rounded-full shrink-0" />
               <span
-                className="text-xs md:text-base text-white/80 font-light font-sf-pro tracking-[0.44px] uppercase"
+                className="text-xs md:text-base text-muted-foreground font-light font-sf-pro tracking-[0.44px] uppercase"
                 style={{ letterSpacing: "4%" }}
               >
                 {t("tagline")}
@@ -35,7 +35,7 @@ export default function HeroSection() {
             </h1>
 
             {/* Sub Heading - 16px with 160% line height */}
-            <p className="text-white/80 text-sm md:text-base font-light mb-8 md:mb-10 md:leading-[160%] max-w-xl">
+            <p className="text-muted-foreground text-sm md:text-base font-light mb-8 md:mb-10 md:leading-[160%] max-w-xl">
               {t("subHeading")}
             </p>
 

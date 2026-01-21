@@ -28,9 +28,9 @@ const features = [
 ];
 export default function RegionalFitSection() {
   return (
-    <section className="relative  font-sf-pro">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-10 items-center max-lg:flex-col max-lg:justify-center">
-        <p className=" text-[40px] font-medium  lg:w-1/3 max-lg:text-center">
+    <section className="section-container relative  font-sf-pro">
+      <div className="section-content   flex gap-10 items-center max-lg:flex-col max-lg:justify-center">
+        <p className=" text-3xl md:text-[40px] font-medium  lg:w-1/3 max-lg:text-center">
           Built for the reality of the GCC.
         </p>
         <div className=" w-full lg:w-2/3">
@@ -47,7 +47,7 @@ export default function RegionalFitSection() {
                     className="w-6 h-6 "
                   />
                 </div>
-                <p className="text-white/80 text-center max-w-68">
+                <p className="text-muted-foreground text-center max-w-68">
                   {feature.content}
                 </p>
               </div>

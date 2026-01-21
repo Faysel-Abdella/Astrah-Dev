@@ -29,9 +29,9 @@ const footerLinks = [
 ];
 const Footer = () => {
   return (
-    <section>
-      <div className="w-full max-w-7xl mx-auto flex ">
-        <div className="w-2/5">
+    <section className="pt-30 section-container ">
+      <div className="w-full max-w-7xl mx-auto flex gap-8 max-md:flex-col ">
+        <div className="md:w-1/3 lg:w-2/5 flex flex-col">
           <div className="flex items-center">
             <Logo imgClassName="h-6" />
           </div>
@@ -40,7 +40,7 @@ const Footer = () => {
             into revenue.
           </div>
         </div>
-        <div className="w-3/5 flex justify-between  text-sm">
+        <div className="md:w-2/3 lg:w-3/5 flex justify-between max-sm:flex-wrap max-md:gap-y-6 max-md:gap-x-6  text-sm">
           {footerLinks.map((section, index) => (
             <div key={index} className="">
               <h3 className=" font-semibold mb-5 text-white/40">

@@ -11,7 +11,6 @@ import Footer from "@/components/footer";
 export default function Home() {
   return (
     <main className="min-h-screen bg-background overflow-x-hidden space-y-30">
-      <Header />
       <HeroSection />
       <YourCRM />
       <RegionalFitSection />
@@ -19,7 +18,6 @@ export default function Home() {
       <MigrationCTA />
       <PricingCTA />
       <BottomCTA />
-      <Footer />
     </main>
   );
 }

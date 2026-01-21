@@ -7,6 +7,8 @@ import localFont from "next/font/local";
 
 import type React from "react";
 import "./globals.css";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -135,7 +137,9 @@ export default async function RootLayout({
         className={`${poppins.variable} ${gilroy.variable} ${defaultFont.className} font-sans antialiased  text-white`}
       >
         <NextIntlClientProvider messages={messages}>
+          <Header />
           {children}
+          <Footer />
         </NextIntlClientProvider>
         <Analytics />
       </body>
