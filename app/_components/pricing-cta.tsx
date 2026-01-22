@@ -4,12 +4,12 @@ import { Button } from "../../components/ui/button";
 const PricingCTA = () => {
   return (
     <section className="w-full font-sf-pro section-container">
-      <div className="relative h-96 md:h-86 w-full max-w-175 flex items-center justify-center  mx-auto overflow-hidden">
+      <div className="relative min-h-100 md:min-h-90 w-full max-w-175  flex items-center justify-center  mx-auto overflow-hidden">
         <div className="absolute w-full h-full bg-card border  rounded-3xl top-20 "></div>
-        <div className="absolute w-full h-full bg-card border rounded-3xl max-w-157.5 mx-auto top-10 "></div>
+        <div className="absolute w-[90%] h-full bg-card border rounded-3xl max-w-157.5 mx-auto top-10 "></div>
         <div className="w-full h-96 md:h-86 bg-linear-to-b bottom-0  absolute from-transparent  to-background"></div>
 
-        <div className="absolute w-full max-md:text-center h-full bg-card border rounded-3xl max-w-135 mx-auto flex flex-col p-6 items-center  ">
+        <div className="z-10 w-[80%] max-md:text-center h-fit bg-card border rounded-3xl  mx-auto flex flex-col p-6 items-center  ">
           <img
             src="/icons/pricing.png"
             alt="Pricing icon"

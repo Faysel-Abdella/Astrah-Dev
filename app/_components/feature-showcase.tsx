@@ -4,8 +4,8 @@ const FeatureShowcase = () => {
   return (
     <section className="relative section-container  font-sf-pro">
       <div className="section-content  flex flex-col gap-30 items-center ">
-        <div className="flex max-md:gap-10 max-md:flex-col-reverse max-md:items-center ">
-          <div className="md:w-1/2 flex flex-col  justify-center max-md:items-center max-md:text-center">
+        <div className="flex max-md:gap-10 max-md:flex-col  ">
+          <div className="md:w-1/2 flex flex-col  justify-center  ">
             <p className="font-medium text-3xl md:text-[40px]">
               Demand, built in.
             </p>
@@ -28,8 +28,8 @@ const FeatureShowcase = () => {
             </div>
           </div>
         </div>
-        <div className="flex  max-md:gap-10  flex-row-reverse max-md:flex-col-reverse max-md:items-center">
-          <div className="md:w-1/2 flex flex-col  justify-center max-md:items-center max-md:text-center">
+        <div className="flex  max-md:gap-10  flex-row-reverse max-md:flex-col ">
+          <div className="md:w-1/2 flex flex-col  justify-center  ">
             <p className="font-medium text-3xl md:text-[40px]">
               Stop revenue leaks.
             </p>
@@ -51,8 +51,8 @@ const FeatureShowcase = () => {
             </div>
           </div>
         </div>
-        <div className="flex max-md:gap-10  max-md:flex-col-reverse max-md:items-center">
-          <div className="md:w-1/2 flex flex-col  justify-center max-md:items-center max-md:text-center">
+        <div className="flex max-md:gap-10  max-md:flex-col ">
+          <div className="md:w-1/2 flex flex-col  justify-center  ">
             <p className="font-medium text-3xl md:text-[40px]">
               Inbox intelligence.
             </p>
@@ -78,8 +78,8 @@ const FeatureShowcase = () => {
             </div>
           </div>
         </div>
-        <div className="flex  max-md:gap-10 flex-row-reverse max-md:flex-col-reverse max-md:items-center">
-          <div className="md:w-1/2 flex flex-col  justify-center max-md:items-center max-md:text-center">
+        <div className="flex  max-md:gap-10 flex-row-reverse max-md:flex-col ">
+          <div className="md:w-1/2 flex flex-col  justify-center  ">
             <p className="font-medium  text-3xl md:text-[40px]">
               The system is alive.
             </p>
