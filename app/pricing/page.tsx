@@ -6,7 +6,7 @@ import PricingCTA from "./_components/pricing-cta";
 
 const PricingPage = () => {
   return (
-    <main className="min-h-screen bg-background overflow-x-hidden space-y-30">
+    <main className="min-h-screen bg-background overflow-x-hidden space-y-30 pt-24 md:pt-32">
       <PricingHero />
       <Pricing />
       <PricingFaq />

@@ -10,7 +10,7 @@ const footerLinks = [
     links: [
       { nameKey: "links.product", url: "#" },
       { nameKey: "links.terms", url: "#" },
-      { nameKey: "links.migration", url: "#" },
+      { nameKey: "links.migration", url: "/migration" },
     ],
   },
   {

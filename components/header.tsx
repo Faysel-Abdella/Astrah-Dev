@@ -6,6 +6,7 @@ import LanguageToggle from "./language-toggle";
 import Logo from "./logo";
 import MobileMenu from "./mobile-menu";
 import Navigation from "./navigation";
+import Link from "next/link";
 
 export default function Header() {
   const { isOpen } = useMenuStore();
@@ -16,17 +17,17 @@ export default function Header() {
       <div className="max-w-7xl mx-auto  py-4 md:py-5">
         <div className="flex items-center justify-between ">
           {/* Left section */}
-          <div className="flex items-center">
+          <div className="flex items-center md:w-1/3 justify-start">
             <Logo />
           </div>
 
           {/* Center section - Navigation */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden  md:flex items-center md:w-1/3 justify-center">
             <Navigation />
           </div>
 
           {/* Right section */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-6 md:w-1/3 justify-end">
             <div className="hidden md:block">
               <LanguageToggle />
             </div>
@@ -52,22 +53,22 @@ function MobileMenuPanel() {
 
   const mobileMenuItems = [
     { label: t("product"), href: "#product" },
-    { label: t("pricing"), href: "#pricing" },
-    { label: t("migration"), href: "#migration" },
+    { label: t("pricing"), href: "pricing" },
+    { label: t("migration"), href: "migration" },
   ];
 
   return (
     <div className="md:hidden bg-background ">
       <nav className="px-4 py-4 space-y-3">
         {mobileMenuItems.map((item) => (
-          <a
+          <Link
             key={item.href}
             href={item.href}
             className="block text-sm text-gray-400 hover:text-[#00d4ff] transition-colors"
             onClick={closeMenu}
           >
             {item.label}
-          </a>
+          </Link>
         ))}
         <button
           className="cursor-pointer w-full mt-4 px-4 py-2.5 rounded-full font-medium transition-colors text-black"

@@ -21,11 +21,11 @@ const PricingCTA = () => {
           <p className=" text-2xl md:text-[32px] font-medium mt-8">
             {t("title")}
           </p>
-          <p className="mt-6">
+          <div className="mt-6">
             {t("startAt")} <span className="text-primary">{t("price")}</span>
             {t("trial")}
             <div className="w-full h-px  mt-8 bg-linear-to-r shrink-0 from-transparent via-border to-transparent" />
-          </p>
+          </div>
           <Button className="mt-8 font-gilroy h-11.5 px-7">{t("cta")}</Button>
         </div>
       </div>
