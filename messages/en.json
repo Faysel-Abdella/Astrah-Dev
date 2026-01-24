@@ -430,5 +430,67 @@
       "description": "If you operate in MENA outside the Gulf, we offer regional pricing and tailored onboarding. Talk to us and we'll recommend the right plan.",
       "button": "Talk to us for regional pricing"
     }
+  },
+  "contactUs": {
+    "hero": {
+      "badge": "CONTACT",
+      "title": "Talk to Astrah.",
+      "description": "If your revenue runs on WhatsApp, Astrah OS is built for your reality. Share a few details and we’ll respond quickly.",
+      "primaryCta": "Send Message",
+      "secondaryCta": "View Pricing",
+      "direct": {
+        "title": "Direct contact.",
+        "description": "For serious inquiries, you can contact us directly:",
+        "emailLabel": "Email",
+        "whatsappLabel": "Optional WhatsApp line",
+        "footer": "Built under Alhaya Solutions FZCO (Dubai)."
+      }
+    },
+    "form": {
+      "title": "Send a message.",
+      "labels": {
+        "fullName": "Full Name",
+        "companyName": "Company Name",
+        "country": "Country",
+        "teamSize": "Team size",
+        "email": "Email",
+        "whatsapp": "WhatsApp number",
+        "purpose": "What are you trying to improve?",
+        "system": "Current system",
+        "language": "Preferred language"
+      },
+      "placeholders": {
+        "fullName": "Eg, Peter",
+        "companyName": "Eg, United kingdom",
+        "country": "Select Country",
+        "teamSize": "Eg, 1-3",
+        "email": "example1@gmail.com",
+        "whatsapp": "+251947344248",
+        "purpose": "Write here ...",
+        "system": "Select System",
+        "language": "Select Language"
+      },
+      "submit": "Send message",
+      "alerts": {
+        "success": "Message sent successfully!",
+        "errorTitle": "Error",
+        "generalError": "An unexpected error occurred. Please try again.",
+        "validation": "Please fill all required fields"
+      }
+    },
+    "cta": {
+      "title": "Ready to run a real system?",
+      "primaryButton": "Send Message",
+      "secondaryButton": "View Product"
+    },
+    "nextSteps": {
+      "title": "What happens next.",
+      "steps": [
+        " We review your workflow and current system",
+        "We confirm fit (GCC/MENA) and onboarding approach",
+        "We share the next step (trial, onboarding, or a short call if needed)"
+      ],
+      "footer": "No spam. No mass outreach. One conversation, handled properly."
+    }
   }
 }
