@@ -9,17 +9,17 @@ const footerLinks = [
     titleKey: "links.title",
     links: [
       { nameKey: "links.product", url: "/#product" },
-      { nameKey: "links.terms", url: "/terms" },
+      { nameKey: "links.terms", url: "/legal/terms" },
       { nameKey: "links.migration", url: "/migration" },
     ],
   },
   {
     titleKey: "legal.title",
     links: [
-      { nameKey: "legal.privacy", url: "/privacy" },
-      { nameKey: "legal.terms", url: "/terms" },
-      { nameKey: "legal.acceptableUse", url: "/acceptableUse" },
-      { nameKey: "legal.refunds", url: "/acceptableUse" },
+      { nameKey: "legal.privacy", url: "/legal/privacy" },
+      { nameKey: "legal.terms", url: "/legal/terms" },
+      { nameKey: "legal.acceptableUse", url: "/legal/acceptableUse" },
+      { nameKey: "legal.refunds", url: "/legal/refunds" },
     ],
   },
   {
