@@ -50,7 +50,7 @@ const FeatureShowcase = () => {
               {t("inbox.title")}
             </p>
             <p className="text-muted-foreground mt-6">{t("inbox.desc")}</p>
-            <p className="font-medium text-3xl md:text-[40px]">
+            <p className="font-medium text-3xl md:text-[40px]  mt-6 md:mt-8 lg:mt-10">
               {t("cash.title")}
             </p>
             <p className="text-muted-foreground mt-6">{t("cash.desc")}</p>
@@ -60,8 +60,8 @@ const FeatureShowcase = () => {
               <li>{t("cash.list3")}</li>
             </ul>
           </div>
-          <div className="md:w-1/2">
-            <div className="relative w-full ">
+          <div className="md:w-1/2 flex items-center">
+            <div className="relative w-full  ">
               <img src={"/feature/feature-3.png"} />
             </div>
           </div>
