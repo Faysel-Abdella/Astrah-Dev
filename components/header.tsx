@@ -51,9 +51,9 @@ function MobileMenuPanel() {
   const { closeMenu } = useMenuStore();
 
   const mobileMenuItems = [
-    { label: t("product"), href: "#product" },
-    { label: t("pricing"), href: "pricing" },
-    { label: t("migration"), href: "migration" },
+    { label: t("product"), href: "/#product" },
+    { label: t("pricing"), href: "/pricing" },
+    { label: t("migration"), href: "/migration" },
   ];
 
   return (

@@ -309,170 +309,170 @@
   "pricingPage": {
     "hero": {
       "badge": "الأسعار",
-      "title": "أسعار شفافة للمشغلين في الخليج.",
-      "description": "نظام أسترا مصمم لفرق الإيرادات التي تعتمد على واتساب في الخليج. اختر الباقة التي تناسب حجم أعمالك واحتياجاتك الذكية.",
-      "secondaryCta": "عرض المنتج",
-      "footer": "تعمل خارج الخليج؟ نقدم أسعاراً إقليمية لمنطقة الشرق الأوسط وشمال أفريقيا. تحدث معنا."
+      "title": "تسعير شفاف للفرق الجادة في الخليج.",
+      "description": "أولاً WhatsApp مبني لفرق الإيرادات التي تعمل عبر Astrah OS اختر الخطة التي تناسب حجمك واحتياجاتك من الذكاء.",
+      "secondaryCta": "ابدأ التجربة المجانية",
+      "footer": "تعمل خارج دول GCC؟ نقدم تسعيرًا إقليميًا لـ MENA. تواصل معنا."
     },
     "plans": {
       "general": {
-        "month": "شهرياً",
-        "migrationLabel": "نقل البيانات",
-        "oneTime": "مرة واحدة",
-        "included": "مشمول"
+        "month": "month",
+        "migrationLabel": "Migration",
+        "oneTime": "one-time",
+        "included": "Included"
       },
       "starter": {
-        "name": "البداية",
+        "name": "STARTER",
         "tagline": "للمستقلين وفرق الخدمات الصغيرة.",
         "cta": "ابدأ التجربة المجانية",
-        "inclusionLabel": "تشمل:",
-        "migrationNote": "قياسي",
+        "inclusionLabel": "Includes:",
+        "migrationNote": "Standard",
         "features": [
-          "CRM أساسي (جهات اتصال، شركات، صفقات، مهام، تقويم)",
-          "ذكاء واتساب (لايت)",
-          "ذكاء الصفقات (لايت)",
-          "صندوق وارد ذكي (لايت)",
-          "مولد عملاء بالذكاء الاصطناعي: 100 عميل / شهرياً",
-          "ذكاء اصطناعي داخلي: مشمول",
-          "استخدام ذكاء اصطناعي خارجي: 200 رمز (Token) / شهرياً",
-          "واجهة متعددة اللغات: إنجليزي + عربي (RTL)",
-          "ذكاء Orb: قياسي"
+          "Core CRM (جهات الاتصال، الشركات، الصفقات، المهام، التقويم)",
+          "WhatsApp Intelligence (Lite)",
+          "AI Deal Intelligence (Lite)",
+          "AI Inbox Zero (Lite)",
+          "AI Lead Generator: 100 leads / month",
+          "Internal AI Intelligence: Included",
+          "External AI usage: 200 tokens / month",
+          "Multilingual UI: English + Arabic (RTL)",
+          "Orb Intelligence: Standard"
         ]
       },
       "business": {
-        "name": "الأعمال",
-        "tagline": "للفرق النامية (3-15 مستخدم).",
+        "name": "BUSINESS",
+        "tagline": "للفرق المتنامية (3-15 مستخدمًا).",
         "cta": "ابدأ التجربة المجانية",
-        "inclusionLabel": "كل ما في باقة البداية، بالإضافة إلى:",
-        "migrationNote": "قياسي",
+        "inclusionLabel": "Everything In Starter, Plus:",
+        "migrationNote": "Standard",
         "features": [
-          "كل ما في باقة البداية",
-          "ذكاء واتساب (كامل)",
-          "ذكاء الصفقات (كامل)",
-          "صندوق وارد ذكي (كامل)",
-          "قائمة الأولويات الذكية",
-          "محسن البيانات بالذكاء الاصطناعي",
-          "حملات (بريد إلكتروني + واتساب)",
-          "أتمتة (أساسية)",
-          "تكامل Make.com (أساسي)",
-          "استخدام ذكاء اصطناعي خارجي: 1,000 رمز / شهرياً",
-          "دعم لغوي موسع"
+          "Everything In Starter",
+          "WhatsApp Intelligence (Full)",
+          "AI Deal Intelligence (Full)",
+          "AI Inbox Zero (Full)",
+          "AI Priority Queue",
+          "AI Data Enhancer",
+          "Campaigns (Email + WhatsApp)",
+          "Automations (Basic)",
+          "Make.com integration (Basic)",
+          "External AI usage: 1,000 tokens / month",
+          "Expanded multilingual support"
         ]
       },
       "pro": {
-        "name": "المحترفين",
-        "tagline": "للفرق الراسخة (15-50 مستخدم).",
+        "name": "PRO",
+        "tagline": "للفرق المستقرة (15-50 مستخدمًا).",
         "cta": "ابدأ التجربة المجانية",
-        "inclusionLabel": "كل ما في باقة الأعمال، بالإضافة إلى:",
-        "migrationNote": "متقدم",
+        "inclusionLabel": "Everything In Business, Plus:",
+        "migrationNote": "Advanced",
         "features": [
-          "كل ما في باقة الأعمال",
-          "أتمتة متقدمة",
-          "ملاحظات اجتماعات ذكية",
-          "مخطط إجراءات ذكي",
-          "محسن الحملات بالذكاء الاصطناعي",
-          "تحليلات متقدمة ولوحات معلومات",
-          "مولد عملاء بالذكاء الاصطناعي: 2,000 عميل / شهرياً",
-          "استخدام ذكاء اصطناعي خارجي: 5,000 رمز / شهرياً",
-          "صلاحيات متقدمة وسجل تدقيق",
-          "ذكاء Orb: محسن"
+          "Everything In Business",
+          "Advanced automations",
+          "AI Meeting Notes",
+          "AI Action Planner",
+          "AI Campaign Optimizer",
+          "Advanced analytics & dashboards",
+          "AI Lead Generator: 2,000 leads / month",
+          "External AI usage: 5,000 tokens / month",
+          "Advanced permissions & audit trail",
+          "Orb Intelligence: Enhanced"
         ]
       },
       "enterprise": {
-        "name": "المؤسسات",
+        "name": "ENTERPRISE",
         "tagline": "للمؤسسات الكبيرة والمجموعات القابضة.",
-        "cta": "تحدث إلى أسترا",
-        "inclusionLabel": "كل ما في باقة المحترفين، بالإضافة إلى:",
+        "cta": "تحدث إلى Astrah",
+        "inclusionLabel": "Everything In Pro, Plus:",
         "features": [
-          "كل ما في باقة المحترفين",
-          "سير عمل وأتمتة مخصصة",
-          "منطق على مستوى المؤسسة بالكامل",
-          "إدارة نجاح مخصصة",
-          "علامة تجارية مخصصة (نطاق، تسجيل دخول)",
-          "نشر سحابي خاص (اختياري)",
-          "مولد عملاء بالذكاء الاصطناعي: 5,000–10,000 عميل / شهرياً",
-          "استخدام ذكاء اصطناعي خارجي: 20,000 رمز / شهرياً"
+          "Everything In Pro",
+          "Custom workflows & automations",
+          "Organization-wide logic",
+          "Dedicated success management",
+          "Custom branding (domain, login)",
+          "Private cloud deployment (optional)",
+          "AI Lead Generator: 5,000–10,000 leads / month",
+          "External AI usage: 20,000 tokens / month"
         ]
       }
     },
     "billingAndTrials": {
-      "title": "الفوترة والفترات التجريبية",
+      "title": "الفوترة والمحاكمة",
       "billingInfo": [
         "تتوفر خطط شهرية وسنوية",
-        "الدفع السنوي = سعر 10 أشهر (حوالي شهرين مجانًا)",
-        "يتم التحويل تلقائيًا إلى خطة مدفوعة ما لم يتم الإلغاء",
-        "يتطلب إدخال بطاقة ائتمان",
-        "فترة تجريبية مجانية لمدة 7 أيام لخطط Starter وBusiness وPro",
-        "لا تتوفر فترة تجريبية لخطة Enterprise"
+        "الفوترة السنوية = سعر 10 أشهر (≈ شهران مجانًا)",
+        "تتحول تلقائيًا إلى خطة مدفوعة ما لم يتم الإلغاء",
+        "بطاقة ائتمان مطلوبة",
+        "تجربة مجانية لمدة 7 أيام على Starter و Business و Pro",
+        "بدون تجربة مجانية Enterprise"
       ]
     },
     "faq": {
-      "badge": "الأسئلة الشائعة",
-      "title": "أسئلة متكررة",
+      "badge": "FAQ",
+      "title": "Frequently asked questions",
       "questions": [
         {
           "id": "faq1",
-          "question": "هل أسترا متاح خارج دول الخليج؟",
-          "answer": "نعم. نحن ندعم أسواق الشرق الأوسط وشمال أفريقيا ونقدم أسعاراً إقليمية بناءً على الدولة ونموذج التشغيل. تحدث معنا."
+          "question": "هل Astrah متاح خارج دول GCC؟",
+          "answer": "نعم. ندعم أسواق MENA ونقدم تسعيرًا إقليميًا بحسب الدولة ونموذج التشغيل. تواصل معنا."
         },
         {
           "id": "faq2",
-          "question": "ما هي \"رموز الذكاء الاصطناعي الخارجي\"؟",
+          "question": "ما هي \"External AI tokens\"؟",
           "answer": "تستخدم رموز (Tokens) الذكاء الاصطناعي الخارجي عندما تتكامل أسترا مع خدمات ذكاء اصطناعي خارجية. هذه الرموز منفصلة عن استخدام الذكاء الاصطناعي الداخلي المشمول في باقتك."
         },
         {
           "id": "faq3",
-          "question": "هل خدمة نقل البيانات مشمولة؟",
+          "question": "هل الترحيل مشمول؟",
           "answer": "يختلف دعم النقل حسب الباقة. تتضمن باقة البداية رسوماً لمرة واحدة للنقل، بينما تتضمن باقات الأعمال والمحترفين دعماً للنقل دون تكلفة إضافية."
         }
       ]
     },
     "cta": {
-      "title": "خارج دول الخليج؟",
-      "description": "إذا كنت تعمل في الشرق الأوسط وشمال أفريقيا خارج الخليج، نقدم أسعاراً إقليمية وتجهيزاً مخصصاً. تحدث معنا وسنوصي بالخطة المناسبة.",
-      "button": "تحدث معنا للحصول على أسعار إقليمية"
+      "title": "خارج دول GCC؟",
+      "description": "إذا كنت تعمل في MENA خارج الخليج، نقدم تسعيرًا إقليميًا وتجهيزاً مناسباً. تواصل معنا وسنوصي بالخطة الأنسب.",
+      "button": "تواصل معنا للحصول على التسعير الإقليمي"
     }
   },
   "contactUs": {
     "hero": {
       "badge": "تواصل معنا",
-      "title": "تحدث إلى أسترا.",
-      "description": "إذا كانت إيراداتك تعتمد على واتساب، فإن نظام أسترا مبني لواقعك. شاركنا بعض التفاصيل وسنرد عليك بسرعة.",
+      "title": "تحدث إلى Astrah.",
+      "description": "إذا كانت إيراداتك تعمل عبر WhatsApp، فإن Astrah OS مبني لواقعك. شارك بعض التفاصيل وسنرد بسرعة.",
       "primaryCta": "إرسال رسالة",
       "secondaryCta": "عرض الأسعار",
       "direct": {
-        "title": "اتصال مباشر.",
+        "title": "تواصل مباشر.",
         "description": "للاستفسارات الجادة، يمكنك التواصل معنا مباشرة:",
-        "emailLabel": "البريد الإلكتروني",
-        "whatsappLabel": "خط واتساب (اختياري)",
-        "footer": "بني تحت شركة الحيا للحلول FZCO (دبي)."
+        "emailLabel": "Email",
+        "whatsappLabel": "Optional WhatsApp Line",
+        "footer": "تم البناء تحت Alhaya Solutions FZCO (Dubai)."
       }
     },
     "form": {
       "title": "أرسل رسالة.",
       "labels": {
-        "fullName": "الاسم الكامل",
-        "companyName": "اسم الشركة",
-        "country": "الدولة",
-        "teamSize": "حجم الفريق",
-        "email": "البريد الإلكتروني",
-        "whatsapp": "رقم واتساب",
-        "purpose": "ما الذي تحاول تحسينه؟",
-        "system": "النظام الحالي",
-        "language": "اللغة المفضلة"
+        "fullName": "الاسم الكامل (إلزامي)",
+        "companyName": "اسم الشركة (إلزامي)",
+        "country": "الدولة (إلزامي) [قائمة منسدلة]",
+        "teamSize": "حجم الفريق (اختياري)",
+        "email": "البريد الإلكتروني (إلزامي)",
+        "whatsapp": "رقم WhatsApp (اختياري لكن موصى به)",
+        "purpose": "ما الذي تحاول تحسينه؟ (إلزامي) [نص قصير]",
+        "system": "النظام الحالي (اختياري)",
+        "language": "اللغة المفضلة (اختياري)"
       },
       "placeholders": {
-        "fullName": "مثال: أحمد محمد",
-        "companyName": "مثال: شركة الخليج التجارية",
-        "country": "اختر الدولة",
-        "teamSize": "مثال: 1-3",
-        "email": "example@domain.com",
-        "whatsapp": "+966...",
-        "purpose": "اكتب هنا...",
+        "fullName": "Eg, Peter",
+        "companyName": "Eg, Venas Tech",
+        "country": "اختر البلد",
+        "teamSize": "Eg, 1-3",
+        "email": "example1@gmail.com",
+        "whatsapp": "+251947344248",
+        "purpose": "أكتب هنا...",
         "system": "اختر النظام",
         "language": "اختر اللغة"
       },
-      "submit": "إرسال الرسالة",
+      "submit": "إرسال رسالة",
       "alerts": {
         "success": "تم إرسال الرسالة بنجاح!",
         "errorTitle": "خطأ",
@@ -488,11 +488,12 @@
     "nextSteps": {
       "title": "ماذا يحدث بعد ذلك.",
       "steps": [
-        "نراجع سير عملك ونظامك الحالي",
-        "نؤكد الملاءمة (الخليج/الشرق الأوسط) ونهج الإعداد",
-        "نشارك الخطوة التالية (تجربة، إعداد، أو مكالمة قصيرة إذا لزم الأمر)"
+        "نراجع سير عملك والنظام الحالي لديك",
+        "نؤكد الملاءمة (GCC/MENA) وطريقة الإعداد",
+        "نشارك الخطوة التالية (تجربة، إعداد، أو مكالمة قصيرة عند الحاجة)",
+        "مستضاف على AWS في منطقة الإمارات"
       ],
-      "footer": "لا رسائل مزعجة. لا تواصل عشوائي. محادثة واحدة تدار بشكل صحيح."
+      "footer": "لا رسائل مزعجة. لا حملات جماعية. محادثة واحدة. تُدار بشكل محترم."
     }
   }
 }

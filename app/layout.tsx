@@ -133,7 +133,7 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${poppins.variable} ${gilroy.variable} ${defaultFont.className} font-sans antialiased  text-white`}
+        className={`${poppins.variable} ${gilroy.variable} ${defaultFont.className} font-sans antialiased  text-white scroll-smooth`}
       >
         <NextIntlClientProvider messages={messages}>
           <Header />

@@ -5,7 +5,7 @@ const FeatureShowcase = () => {
   const t = useTranslations("landing.featureShowcase");
 
   return (
-    <section className="relative section-container  font-sf-pro">
+    <section id="product" className="relative section-container  font-sf-pro">
       <div className="section-content  flex flex-col gap-30 items-center ">
         <div className="flex max-md:gap-10 max-md:flex-col  ">
           <div className="md:w-1/2 flex flex-col  justify-center  ">

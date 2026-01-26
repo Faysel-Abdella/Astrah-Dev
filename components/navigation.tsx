@@ -7,9 +7,9 @@ export default function Navigation() {
   const t = useTranslations("header");
 
   const navItems = [
-    { label: t("product"), href: "#product" },
-    { label: t("pricing"), href: "pricing" },
-    { label: t("migration"), href: "migration" },
+    { label: t("product"), href: "/#product" },
+    { label: t("pricing"), href: "/pricing" },
+    { label: t("migration"), href: "/migration" },
   ];
 
   return (

@@ -321,7 +321,7 @@
         "included": "Included"
       },
       "starter": {
-        "name": "Starter",
+        "name": "STARTER",
         "tagline": "For Freelancers And Small Service Teams.",
         "cta": "Start Free Trial",
         "inclusionLabel": "Includes:",
@@ -339,7 +339,7 @@
         ]
       },
       "business": {
-        "name": "Business",
+        "name": "BUSINESS",
         "tagline": "For Growing Teams (3-15 Users).",
         "cta": "Start Free Trial",
         "inclusionLabel": "Everything in Starter, plus:",
@@ -359,7 +359,7 @@
         ]
       },
       "pro": {
-        "name": "Pro",
+        "name": "PRO",
         "tagline": "For Established Teams (15-50 Users).",
         "cta": "Start Free Trial",
         "inclusionLabel": "Everything in Business, plus:",
@@ -378,7 +378,7 @@
         ]
       },
       "enterprise": {
-        "name": "Enterprise",
+        "name": "ENTERPRISE",
         "tagline": "For Large Organizations And Holding Groups.",
         "cta": "Talk to Astrah",
         "inclusionLabel": "Everything in Pro, plus:",
@@ -489,7 +489,8 @@
       "steps": [
         " We review your workflow and current system",
         "We confirm fit (GCC/MENA) and onboarding approach",
-        "We share the next step (trial, onboarding, or a short call if needed)"
+        "We share the next step (trial, onboarding, or a short call if needed)",
+        "Hosted on AWS in the UAE region"
       ],
       "footer": "No spam. No mass outreach. One conversation, handled properly."
     }

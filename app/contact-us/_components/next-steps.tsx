@@ -1,12 +1,12 @@
 import StyledIcon from "@/components/styled-icon";
-import { CornerDownRight, FileSearch, SquareCheck } from "lucide-react";
+import { CornerDownRight, FileSearch, SquareCheck, Wifi } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const NextSteps = () => {
   const t = useTranslations("contactUs.nextSteps");
   const principlesLabels = t.raw("steps") as string[];
 
-  const icons = [FileSearch, SquareCheck, CornerDownRight];
+  const icons = [FileSearch, SquareCheck, CornerDownRight, Wifi];
 
   return (
     <section className="section-container w-full font-sf-pro">
@@ -15,7 +15,7 @@ const NextSteps = () => {
           {t("title")}
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3  mt-12 gap-7">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  mt-12 gap-7">
           {principlesLabels.map((label, index) => (
             <div
               key={label}
