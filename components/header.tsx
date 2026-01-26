@@ -1,15 +1,16 @@
 "use client";
 
-import { useMenuStore } from "@/store/menu-store";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { useState } from "react";
 import LanguageToggle from "./language-toggle";
 import Logo from "./logo";
 import MobileMenu from "./mobile-menu";
 import Navigation from "./navigation";
-import Link from "next/link";
 
 export default function Header() {
-  const { isOpen } = useMenuStore();
+  const [isOpen, setIsOpen] = useState(false);
+
   const t = useTranslations("header");
 
   return (
@@ -38,20 +39,26 @@ export default function Header() {
                 })}
               </button>
             </Link>
-            <MobileMenu />
+            <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
         </div>
       </div>
 
       {/* Mobile menu overlay */}
-      {isOpen && <MobileMenuPanel />}
+      {isOpen && <MobileMenuPanel setIsOpen={setIsOpen} />}
     </header>
   );
 }
 
-function MobileMenuPanel() {
+function MobileMenuPanel({
+  setIsOpen,
+}: {
+  setIsOpen: (isOpen: boolean) => void;
+}) {
   const t = useTranslations("header");
-  const { closeMenu } = useMenuStore();
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
 
   const mobileMenuItems = [
     { label: t("product"), href: "/#product" },
