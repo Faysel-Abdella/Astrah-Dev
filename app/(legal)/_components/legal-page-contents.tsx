@@ -4,22 +4,18 @@ import ReactMarkdown from "react-markdown";
 import rehypeSlug from "rehype-slug";
 import { notFound, redirect } from "next/navigation";
 import { getLocale, getTranslations } from "next-intl/server";
-import TableOfContents from "@/components/table-of-contents";
+import TableOfContents from "./table-of-contents";
 
-interface Props {
-  params: Promise<{
-    slug: string;
-  }>;
+interface LegalPageContentsProps {
+  title: string;
 }
 
-const validSlugs = ["privacy", "terms", "acceptableUse", "refunds"];
-
-export default async function LegalPage({ params }: Props) {
-  const { slug } = await params;
-  if (!validSlugs.includes(slug)) return notFound();
+export default async function LegalPageContents({
+  title,
+}: LegalPageContentsProps) {
   const locale = await getLocale();
   const t = await getTranslations("legal");
-  const data = getLegalContent(slug, locale);
+  const data = getLegalContent(title, locale);
   if (!data) return notFound();
 
   const toc = extractToc(data.content);
@@ -27,7 +23,7 @@ export default async function LegalPage({ params }: Props) {
   return (
     <main className="section-container">
       <div className="section-content pt-24 md:pt-32 ">
-        <p className=" text-3xl lg:text-[40px] font-medium my-12">{t(slug)}</p>
+        <p className=" text-3xl lg:text-[40px] font-medium my-12">{t(title)}</p>
         <div className="flex gap-12 max-md:flex-col-reverse">
           <article className="prose prose-invert max-w-none flex-1">
             <ReactMarkdown rehypePlugins={[rehypeSlug]}>

@@ -200,7 +200,7 @@
       "title": "Migration isn't hard. Bad migration is.",
       "sub": "Most CRM migrations fail for two reasons:",
       "reasons": ["Dirty data", "Broken workflows"],
-      "description": "Astrah migration is designed to prevent both. <br /> We migrate the data and validate the operating flow so your team can actually use it on day one.",
+      "description": "Astrah migration is designed to prevent both. \n We migrate the data and validate the operating flow so your team can actually use it on day one.",
       "cardTitle": "What we migrate.",
       "cardSub": "For standard migrations, we move and map the core objects you need to operate immediately:",
       "coreObjects": [
