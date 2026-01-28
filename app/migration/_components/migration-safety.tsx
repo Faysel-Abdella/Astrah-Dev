@@ -33,7 +33,7 @@ const MigrationSafety = () => {
             </div>
           ))}
         </div>
-        <p className="text-center mt-12 max-w-132 text-xl text-white font-semibold">
+        <p className="text-center mt-12 max-w-132 md:text-lg lg:text-xl text-white font-semibold">
           {t("footer")}
         </p>
       </div>

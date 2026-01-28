@@ -21,12 +21,10 @@ export default function Requirments() {
             {items.map((content, index) => (
               <div
                 key={index}
-                className="flex break-inside-avoid h-full rounded-2xl bg-card border flex-col mb-4 gap-4 flex-1 py-5 px-10.5 items-center"
+                className="flex break-inside-avoid h-full  rounded-2xl bg-card border flex-col mb-4 gap-4 flex-1 py-5 px-8 items-center"
               >
                 <StyledIcon Icon={icons[index]} />
-                <p className="text-muted-foreground text-center max-w-68">
-                  {content}
-                </p>
+                <p className="text-muted-foreground text-center ">{content}</p>
               </div>
             ))}
           </div>

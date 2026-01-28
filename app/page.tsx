@@ -5,6 +5,7 @@ import MigrationCTA from "@/app/_components/migration-cta";
 import PricingCTA from "@/app/_components/pricing-cta";
 import RegionalFitSection from "@/app/_components/regional-fit-section";
 import YourCRM from "@/app/_components/your-crm";
+import SystemModules from "./_components/system-modules";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroSection />
       <YourCRM />
       <RegionalFitSection />
+      <SystemModules />
       <FeatureShowcase />
       <MigrationCTA />
       <PricingCTA />
