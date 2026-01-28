@@ -3,7 +3,13 @@ import React from "react";
 
 const BillingAndTrials = () => {
   const t = useTranslations("pricingPage.billingAndTrials");
-  const billingInfo = t.raw("billingInfo") as string[];
+  const billingInfo = [
+    "Monthly and annual plans available",
+    "Annual billing = price of 10 months (≈2 months free)",
+    "7-day free trial on Starter, Business, Pro",
+    "Auto-converts unless canceled",
+    "Enterprise: no trial",
+  ];
   return (
     <section className="section-container">
       <div className="section-content ">
@@ -16,10 +22,10 @@ const BillingAndTrials = () => {
           {billingInfo.map((info, index) => (
             <div
               key={index}
-              className="flex items-start h-fit w-full bg-card border rounded-2xl gap-3 p-5 flex-col"
+              className="flex items-start h-full w-full bg-card border rounded-2xl gap-3 p-5 flex-col"
             >
               <div className="bg-third-background size-6 rounded-full shrink-0 flex items-center justify-center mt-1 border-t border-white/25"></div>
-              <p className="text-lg text-muted-foreground">{info}</p>
+              <p className="text-lg text-muted-foreground ">{info}</p>
             </div>
           ))}
         </div>

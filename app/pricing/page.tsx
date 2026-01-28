@@ -4,12 +4,14 @@ import Pricing from "./_components/pricing";
 import PricingFaq from "./_components/pricing-faq";
 import PricingCTA from "./_components/pricing-cta";
 import BillingAndTrials from "./_components/billing-and-trials";
+import OnTheRoadmap from "./_components/on-roadmap";
 
 const PricingPage = () => {
   return (
     <main className="min-h-screen bg-background overflow-x-hidden space-y-16 lg:space-y-30 pt-24 md:pt-32">
       <PricingHero />
       <Pricing />
+      <OnTheRoadmap />
       <BillingAndTrials />
       <PricingFaq />
       <PricingCTA />
