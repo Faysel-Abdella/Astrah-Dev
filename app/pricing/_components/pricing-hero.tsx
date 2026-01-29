@@ -34,7 +34,13 @@ const PricingHero = () => {
             {t("secondaryCta")}
           </Button>
         </div>
-        <p className="text-muted-foreground mt-16">{t("footer")}</p>
+        <div className="text-muted-foreground mt-16">
+          {t.rich("footer", {
+            bold: (chunk) => (
+              <div className="text-xl font-medium text-foreground">{chunk}</div>
+            ),
+          })}
+        </div>
       </div>
     </section>
   );

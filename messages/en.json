@@ -110,7 +110,8 @@
     },
     "migration": {
       "title": "Go live in days, not weeks.",
-      "desc": "Most standard migrations go live in ~72 hours.Complex environments are scoped separately.",
+      "desc-1": "Most standard migrations go live in ~72 hours.",
+      "desc-2": "Complex environments are scoped separately.",
       "cta": "View Migration"
     }
   },
@@ -315,7 +316,7 @@
       "title": "Transparent pricing for GCC operators.",
       "description": "Astrah OS is built for WhatsApp-first revenue teams in the Gulf. Choose a plan that matches your volume and intelligence needs.",
       "secondaryCta": "View Product",
-      "footer": "Operating outside the GCC? We offer regional pricing for MENA. Talk to us."
+      "footer": "Operating outside the GCC? We offer regional pricing for MENA.<bold> Talk to us.</bold>"
     },
     "plans": {
       "general": {
