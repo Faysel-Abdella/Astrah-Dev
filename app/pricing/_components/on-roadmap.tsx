@@ -8,19 +8,28 @@ const OnTheRoadmap = () => {
     "Advanced workflow engine",
     "Full audit logging / SSO",
   ];
+
   return (
     <section className="section-container">
-      <div className="section-content ">
+      <div className="section-content">
         <div className="flex w-full justify-center">
-          <p className="font-medium text-3xl md:text-[40px] text-start">
+          <p className="font-medium text-3xl md:text-[40px] text-center">
             On the Roadmap
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+
+        {/* The parent container uses flex-wrap and justify-center */}
+        <div className="flex flex-wrap justify-center gap-6 mt-12 w-full max-w-6xl mx-auto">
           {roadmapContents.map((content, index) => (
             <DepthCard
               key={index}
-              className="flex items-start h-fit w-full bg-card border rounded-2xl gap-3 p-5 flex-col"
+              className="
+                flex items-start flex-col bg-card border rounded-2xl gap-3 p-5
+                w-full 
+                md:w-[calc(50%-12px)] 
+                lg:w-[calc(33.33%-16px)]
+                md:min-h-30 lg:min-h-35 xl:min-h-10
+              "
             >
               <div className="bg-third-background size-6 rounded-full shrink-0 flex items-center justify-center mt-1 border-t border-white/25"></div>
               <p className="text-lg text-muted-foreground">{content}</p>

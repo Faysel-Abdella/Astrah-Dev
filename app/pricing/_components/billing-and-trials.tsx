@@ -1,4 +1,5 @@
 import DepthCard from "@/components/depth-card";
+import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import React from "react";
 
@@ -19,11 +20,14 @@ const BillingAndTrials = () => {
             {t("title")}
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <div className="flex flex-wrap justify-center gap-6 mt-12 w-full max-w-6xl mx-auto">
           {billingInfo.map((info, index) => (
             <DepthCard
               key={index}
-              className="flex items-start h-full w-full bg-card border rounded-2xl gap-3 p-5 flex-col"
+              className={cn(
+                "flex items-start flex-col bg-card border rounded-2xl gap-3 p-5 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] md:min-h-34 ",
+                index > 2 && "xl:min-h-10",
+              )}
             >
               <div className="bg-third-background size-6 rounded-full shrink-0 flex items-center justify-center mt-1 border-t border-white/25"></div>
               <p className="text-lg text-muted-foreground ">{info}</p>
