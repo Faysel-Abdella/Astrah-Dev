@@ -48,7 +48,7 @@ export default function RegionalFit() {
             {features.map((feature) => (
               <DepthCard
                 key={feature.id}
-                className="flex break-inside-avoid h-full lg:h-fit rounded-2xl  bg-card border flex-col  mb-4 gap-4  flex-1 py-5 px-5  items-center"
+                className="flex break-inside-avoid h-full  rounded-2xl  bg-card border flex-col  mb-4 gap-4  flex-1 py-5 px-5  items-center"
               >
                 <StyledIcon Icon={feature.icon} />
                 <p className="text-muted-foreground text-center ">

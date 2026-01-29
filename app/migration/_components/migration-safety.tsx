@@ -27,7 +27,7 @@ const MigrationSafety = () => {
           {principlesLabels.map((label, index) => (
             <DepthCard
               key={label}
-              className="flex break-inside-avoid h-fit rounded-2xl bg-card border flex-col p-5 "
+              className="flex break-inside-avoid h-full rounded-2xl bg-card border flex-col p-5 "
             >
               <StyledIcon Icon={icons[index]} />
               <p className="text-lg font-medium mt-6 ">{label}</p>

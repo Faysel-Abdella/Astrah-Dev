@@ -14,6 +14,14 @@ import GlowCard from "@/components/glow-card";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import GlassCard from "@/components/glass-card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselDots,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const SystemModules = () => {
   const modules = [
@@ -88,12 +96,7 @@ const SystemModules = () => {
       title: "Ask Astrah (Orb AI Assistant)",
       description:
         "Answers across CRM + WhatsApp + docs, with optional general knowledge mode.",
-      output: {
-        Icon: TriangleAlert,
-        title: "Payment Request",
-        evidence: <div>Amount: 50,000 AED</div>,
-        suggestion: "Suggested: send secure payment link",
-      },
+      output: "/feature/ask-ai.png",
     },
     {
       id: 7,
@@ -121,7 +124,7 @@ const SystemModules = () => {
         <p className="text-muted-foreground mt-6 ">
           One operating layer. Each module produces signals you can act on.
         </p>
-        <div className="grid grid-cols-2 w-full mt-14 gap-30">
+        <div className=" max-lg:hidden grid grid-cols-2 w-full mt-14 gap-30">
           <div className=" flex flex-col">
             {modules.map((module, index) => (
               <button
@@ -145,16 +148,47 @@ const SystemModules = () => {
             <p className="text-2xl font-medium">{visibleModule.title}</p>
             <p className="text-white/60 mt-6">{visibleModule.description}</p>
             <div className="mt-14">
-              <GlassCard
-                Icon={visibleModule.output.Icon}
-                evidence={visibleModule.output.evidence}
-                suggestion={visibleModule.output.suggestion}
-                title={visibleModule.output.title}
-                glowDirection={visibleModule.id % 2 == 0 ? "top" : "bottom"}
-              />
+              {typeof visibleModule.output == "string" ? (
+                <img src={visibleModule.output} className="w-full h-full" />
+              ) : (
+                <GlassCard
+                  Icon={visibleModule.output.Icon}
+                  evidence={visibleModule.output.evidence}
+                  suggestion={visibleModule.output.suggestion}
+                  title={visibleModule.output.title}
+                  glowDirection={visibleModule.id % 2 == 0 ? "top" : "bottom"}
+                />
+              )}
             </div>
           </div>
         </div>
+
+        <Carousel className=" lg:hidden w-full  mt-15">
+          <CarouselContent className="h-fit ">
+            {modules.map((module) => (
+              <CarouselItem key={module.id} className="h-fit">
+                <p className="text-2xl font-medium">{module.title}</p>
+                <p className="text-white/60 mt-6">{module.description}</p>
+                <div className="mt-14 flex justify-center max-w-96 pb-10 mx-auto">
+                  {typeof module.output == "string" ? (
+                    <img src={module.output} className="w-full mx-auto h-fit" />
+                  ) : (
+                    <GlassCard
+                      Icon={module.output.Icon}
+                      evidence={module.output.evidence}
+                      suggestion={module.output.suggestion}
+                      title={module.output.title}
+                      glowDirection={module.id % 2 == 0 ? "top" : "bottom"}
+                    />
+                  )}
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className=" start-10" />
+          <CarouselNext className="end-10" />
+          <CarouselDots />
+        </Carousel>
       </div>
     </section>
   );
