@@ -21,7 +21,12 @@ const Pricing = () => {
         type: "one-time",
         note: "Standard",
       },
-      inclusionLabel: "includes:",
+      inclusionLabel: "Core:",
+      summarizedFeatures: [
+        "CRM (contacts, companies, deals, tasks, calendar)",
+        "Pipeline views + basic KPIs",
+        "Roles & permissions (basic)",
+      ],
       featureCategories: [
         {
           title: "Core:",
@@ -70,6 +75,12 @@ const Pricing = () => {
         note: "~72 hours standard",
       },
       inclusionLabel: "Everything in Starter, Plus:",
+      summarizedFeatures: [
+        "WhatsApp Intelligence (Full)",
+        "Automations(Basic)",
+        "Make.com integration (Basic)",
+        "Expanded multilingual support",
+      ],
       featureCategories: [
         {
           title: "Intelligence (Full):",
@@ -115,6 +126,12 @@ const Pricing = () => {
         note: "Advanced",
       },
       inclusionLabel: "Everything in Business, Plus:",
+      summarizedFeatures: [
+        "Management dashboards & KPIs ",
+        "Advanced integrations",
+        "Advanced migration support",
+        "Advanced migration support",
+      ],
       featureCategories: [
         {
           title: "Management & Control:",
@@ -159,6 +176,13 @@ const Pricing = () => {
       cta: "Talk to Astrah",
       migration: null,
       inclusionLabel: "Everything in Pro, Plus:",
+      summarizedFeatures: [
+        "Organization-wide controls",
+        "Dedicated success manager",
+        "Custom onboarding & workshops",
+        "Advanced integrations support (Make.com + Webhooks)",
+        "Custom branding options (domain/login/branding)",
+      ],
       featureCategories: [
         {
           title: "",
@@ -187,95 +211,77 @@ const Pricing = () => {
 
   return (
     <section className="section-container gap-5">
-      <div className="section-content grid md:grid-cols-2  gap-8">
+      <div className=" max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4  gap-5">
         {pricingPlans.map((plan) => (
           <div
             key={plan.id}
             className={cn(
-              "bg-card overflow-hidden relative shadow-[inset_0_0px_50px_rgba(255,255,255,0.05)] w-full border flex flex-col h-full p-6 justify-between rounded-3xl",
+              "bg-card overflow-hidden relative shadow-[inset_0_0px_50px_rgba(255,255,255,0.05)] w-full border flex flex-col h-full p-6 justify-between rounded-2xl",
               plan.id === "enterprise" &&
                 "border-primary shadow-[inset_0_0px_50px_rgba(255,255,255,0.15)]",
+              plan.id === "starter" &&
+                "bg-background shadow-[inset_0_0px_50px_rgba(255,255,255,0.05)]",
             )}
           >
-            <div className="flex flex-col h-full">
-              <p className="text-muted-foreground uppercase  font-light tracking-widest mb-4">
+            <div className="flex flex-col items-center text-center h-full">
+              <p className="text-muted-foreground uppercase  text-sm font-light tracking-widest mb-4">
                 {plan.name}
               </p>
 
-              <div className="">
-                <span className="font-medium text-3xl">
+              <div className=" flex flex-wrap items-end justify-center">
+                <div className="font-medium text-3xl">
                   {plan.priceRange
                     ? `$${plan.priceRange.min} - $${plan.priceRange.max}`
                     : `$${plan.price}`}
-                </span>
-                <span className="text-muted-foreground text-sm">
+                </div>
+
+                <div className="text-muted-foreground text-lg">
                   {plan.billingPeriod}
-                </span>
+                </div>
               </div>
 
               <p className="text-muted-foreground font-light mt-5 ">
                 {plan.tagline}
               </p>
-              {plan.team && (
-                <p className="text-muted-foreground font-semibold mt-5">
-                  {plan.team}
-                </p>
-              )}
 
-              <div className="h-px w-full bg-border shrink-0 my-5"></div>
-
-              <p className="text-muted-foreground  font-light ">
-                {plan.inclusionLabel}
-              </p>
-
-              <div className="flex flex-col gap-5 mt-5">
-                {plan.featureCategories.map((category, idx) => (
-                  <div key={idx}>
-                    {category.title && (
-                      <p className="text-muted-foreground text-sm font-light ">
-                        {category.title}
-                      </p>
-                    )}
-                    <ul className="flex flex-col gap-3.5 mt-3">
-                      {category.features.map((feature, index) => (
-                        <li key={index} className="flex items-start gap-3 ">
-                          <div className="bg-primary/25 size-5 rounded-full shrink-0 flex items-center justify-center mt-0.5">
-                            <Check className="size-3 text-primary" />
-                          </div>
-                          <span className="text-muted-foreground ">
-                            {feature}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-            {plan.id !== "enterprise" && (
-              <>
-                <div className="h-px shrink-0 w-full bg-white/10 mt-5" />
-                <div className="mt-5 text-muted-foreground">
-                  <p className=" font-semibold">WhatsApp</p>
-                  <p className=" font-light">
-                    includes allowance; usage beyond allowance is metered.
-                  </p>
-                </div>
-              </>
-            )}
-
-            <div className="h-fit flex-col flex mt-6 z-10">
               <button
                 className={cn(
-                  "bg-third-background border border-white/10 w-full py-3 rounded-lg text-sm font-medium transition-colors hover:bg-white/5",
+                  "bg-third-background border mt-5 border-white/10 w-full py-3 rounded-lg text-sm font-medium transition-colors hover:bg-white/5",
                   plan.id === "enterprise" &&
                     "bg-primary text-black border-transparent max-md:mt-37 hover:bg-primary/90",
                 )}
               >
                 {plan.cta}
               </button>
+              <div className="h-px w-full bg-border shrink-0 my-5"></div>
+              <p className="text-muted-foreground  font-light ">
+                {plan.inclusionLabel}
+              </p>
 
-              {plan.migration && (
+              <div className="flex flex-col gap-5 mt-5">
+                <ul className="flex flex-col gap-3.5 mt-3">
+                  {plan.summarizedFeatures.map((feature, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-start text-start gap-3 "
+                    >
+                      <div className="bg-primary/25 size-5 rounded-full shrink-0 flex items-center justify-center mt-0.5">
+                        <Check className="size-3 text-primary" />
+                      </div>
+                      <span className="text-muted-foreground ">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <button className="text-sm font-light mx-auto text-muted-foreground mt-6">
+              View full features
+            </button>
+
+            {plan.migration && (
+              <div className="h-fit flex-col flex mt-5 z-10">
+                <div className="h-px shrink-0 w-full bg-white/10 " />
                 <div className="mt-6  ">
                   <p className="font-light  text-muted-foreground">Migration</p>
                   <div className="flex items-baseline gap-2 mt-1">
@@ -298,13 +304,13 @@ const Pricing = () => {
                     </span>
                   </div>
                 </div>
-              )}
-            </div>
+              </div>
+            )}
 
             {plan.id === "enterprise" && (
               <div
                 className={
-                  "absolute max-md:opacity-40 -bottom-1/3 w-1/2 left-1/4 h-60 bg-primary mx-auto blur-[100px] pointer-events-none"
+                  "absolute opacity-40 -bottom-1/3 w-1/2 left-1/4 h-60 bg-primary mx-auto blur-[100px] pointer-events-none"
                 }
               />
             )}
