@@ -16,7 +16,7 @@ const MigrationFaq = () => {
         <p className=" font-medium text-2xl md:text-4xl lg:text-[40px] mt-5 text-center">
           {t("title")}
         </p>
-        <div className=" max-w-3xl mt-12">
+        <div className=" max-w-3xl w-full mt-12">
           <FAQAccordion faqData={faqData} />
         </div>
       </div>

@@ -108,9 +108,9 @@
           "title": "AI Inbox Zero",
           "description": "Unified view that triages conversations and produces next steps.",
           "output": {
-            "title": "High-intent lead detected",
-            "evidence": "Match score: 84/100 · High intent signals",
-            "suggestion": "Suggested: draft outreach message"
+            "title": "Unread conversation",
+            "evidence": "3 messages awaiting reply · 2 high priority",
+            "suggestion": "Suggested: Review and respond"
           }
         },
         "priorityQueue": {
