@@ -5,6 +5,20 @@
 
 @custom-variant dark (&:is(.dark *));
 
+.scrollbar1::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollbar1::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #1e242d;
+  border: 1px solid #1e242d;
+}
+
+.scrollbar1::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #11151a;
+}
 :root {
   /* Updated all cyan colors to exact #00d4ff */
   --background: oklch(0.1683 0.0181 263.9);

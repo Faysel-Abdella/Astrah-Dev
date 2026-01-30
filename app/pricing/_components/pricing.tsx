@@ -2,19 +2,22 @@ import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
 import React from "react";
 import { useTranslations } from "next-intl";
+import PlanModal from "./plan-modal";
+import { PricingPlan } from "@/types";
 
+export const isEnterprisePlan = (id: string) => id == "enterprise";
 const Pricing = () => {
   const t = useTranslations("pricingPage.plans");
   const tGeneral = useTranslations("pricingPage.plans.general");
 
-  const pricingPlans = [
+  const pricingPlans: PricingPlan[] = [
     {
       id: "starter",
       name: "STARTER",
       price: 39,
       billingPeriod: "/month",
       tagline: "For Solo Operators And Small Service Teams.",
-      team: "Team: 1 user included",
+      team: "1 user included.",
       cta: "Start Free Trial",
       migration: {
         price: 199,
@@ -22,6 +25,7 @@ const Pricing = () => {
         note: "Standard",
       },
       inclusionLabel: "Core:",
+      modalInclusionLabel: "Includes",
       summarizedFeatures: [
         "CRM (contacts, companies, deals, tasks, calendar)",
         "Pipeline views + basic KPIs",
@@ -67,7 +71,7 @@ const Pricing = () => {
       price: 99,
       billingPeriod: "/month",
       tagline: "For solo operators and small service teams.",
-      team: "For Growing Teams.",
+      team: "Up to 5 users included",
       cta: "Start Free Trial",
       migration: {
         price: 0,
@@ -75,6 +79,7 @@ const Pricing = () => {
         note: "~72 hours standard",
       },
       inclusionLabel: "Everything in Starter, Plus:",
+
       summarizedFeatures: [
         "WhatsApp Intelligence (Full)",
         "Automations(Basic)",
@@ -118,12 +123,12 @@ const Pricing = () => {
       price: 199,
       billingPeriod: "/month",
       tagline: "For Established Teams.",
-      team: "Team scale: up to 15 users included (Business includes 5)",
+      team: "For established teams.",
       cta: "Start Free Trial",
       migration: {
         price: 0,
         type: "included",
-        note: "Advanced",
+        note: "~72 hours standard",
       },
       inclusionLabel: "Everything in Business, Plus:",
       summarizedFeatures: [
@@ -173,8 +178,13 @@ const Pricing = () => {
       price: 599,
       billingPeriod: "/month",
       tagline: "For Large Organizations And Holding Groups.",
+      team: "organizations and holding groups.",
       cta: "Talk to Astrah",
-      migration: null,
+      migration: {
+        price: 0,
+        type: "included",
+        note: "~72 hours standard",
+      },
       inclusionLabel: "Everything in Pro, Plus:",
       summarizedFeatures: [
         "Organization-wide controls",
@@ -211,7 +221,7 @@ const Pricing = () => {
 
   return (
     <section className="section-container gap-5">
-      <div className=" max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4  gap-5">
+      <div className=" max-w-7xl mx-auto grid md:grid-cols-2 xl:grid-cols-4  gap-5">
         {pricingPlans.map((plan) => (
           <div
             key={plan.id}
@@ -247,39 +257,33 @@ const Pricing = () => {
               <button
                 className={cn(
                   "bg-third-background border mt-5 border-white/10 w-full py-3 rounded-lg text-sm font-medium transition-colors hover:bg-white/5",
-                  plan.id === "enterprise" &&
+                  isEnterprisePlan(plan.id) &&
                     "bg-primary text-black border-transparent max-md:mt-37 hover:bg-primary/90",
                 )}
               >
                 {plan.cta}
               </button>
               <div className="h-px w-full bg-border shrink-0 my-5"></div>
-              <p className="text-muted-foreground  font-light ">
+
+              <p className="text-muted-foreground w-full text-start font-light ">
                 {plan.inclusionLabel}
               </p>
 
-              <div className="flex flex-col gap-5 mt-5">
-                <ul className="flex flex-col gap-3.5 mt-3">
-                  {plan.summarizedFeatures.map((feature, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-start text-start gap-3 "
-                    >
-                      <div className="bg-primary/25 size-5 rounded-full shrink-0 flex items-center justify-center mt-0.5">
-                        <Check className="size-3 text-primary" />
-                      </div>
-                      <span className="text-muted-foreground ">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <ul className="flex flex-col gap-3.5 mt-4 items-start w-full">
+                {plan.summarizedFeatures.map((feature, idx) => (
+                  <li key={idx} className="flex items-start text-start gap-3 ">
+                    <div className="bg-primary/25 size-5 rounded-full shrink-0 flex items-center justify-center mt-0.5">
+                      <Check className="size-3 text-primary" />
+                    </div>
+                    <span className="text-muted-foreground ">{feature}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            <button className="text-sm font-light mx-auto text-muted-foreground mt-6">
-              View full features
-            </button>
+            <PlanModal pricingPlan={plan} />
 
-            {plan.migration && (
+            {!isEnterprisePlan(plan.id) && (
               <div className="h-fit flex-col flex mt-5 z-10">
                 <div className="h-px shrink-0 w-full bg-white/10 " />
                 <div className="mt-6  ">
@@ -307,7 +311,7 @@ const Pricing = () => {
               </div>
             )}
 
-            {plan.id === "enterprise" && (
+            {isEnterprisePlan(plan.id) && (
               <div
                 className={
                   "absolute opacity-40 -bottom-1/3 w-1/2 left-1/4 h-60 bg-primary mx-auto blur-[100px] pointer-events-none"
