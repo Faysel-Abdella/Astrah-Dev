@@ -8,6 +8,7 @@ import * as React from "react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useLocale } from "next-intl";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -231,7 +232,8 @@ function CarouselPrevious({
   size = "icon",
   ...props
 }: React.ComponentProps<typeof Button>) {
-  const { orientation, scrollPrev, canScrollPrev } = useCarousel();
+  const { orientation, scrollPrev, canScrollPrev, scrollNext } = useCarousel();
+  const locale = useLocale();
 
   return (
     <Button
@@ -246,7 +248,7 @@ function CarouselPrevious({
         className,
       )}
       disabled={!canScrollPrev}
-      onClick={scrollPrev}
+      onClick={locale == "ar" ? scrollNext : scrollPrev}
       {...props}
     >
       <ArrowLeft />
@@ -261,7 +263,8 @@ function CarouselNext({
   size = "icon",
   ...props
 }: React.ComponentProps<typeof Button>) {
-  const { orientation, scrollNext, canScrollNext } = useCarousel();
+  const { orientation, scrollNext, canScrollNext, scrollPrev } = useCarousel();
+  const locale = useLocale();
 
   return (
     <Button
@@ -276,7 +279,7 @@ function CarouselNext({
         className,
       )}
       disabled={!canScrollNext}
-      onClick={scrollNext}
+      onClick={locale == "ar" ? scrollPrev : scrollNext}
       {...props}
     >
       <ArrowRight />

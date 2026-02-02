@@ -209,13 +209,12 @@ const SystemModules = () => {
           </div>
         </div>
 
-        <Carousel className="lg:hidden w-full mt-15" dir="ltr">
-          {/* Note: Carousel direction is usually controlled by the parent html dir, 
-              but specifically for shadcn/embla carousel, you might need to ensure 
-              content direction is handled if the carousel logic relies on LTR. 
-              If the site is RTL, remove dir="ltr" above to test native behavior.
-           */}
-          <CarouselContent className="h-fit">
+        <Carousel
+          opts={{ loop: true }}
+          className="lg:hidden w-full mt-15"
+          dir="ltr"
+        >
+          <CarouselContent className="h-min">
             {modules.map((module) => (
               <CarouselItem key={module.id} className="h-fit">
                 <p className="text-2xl font-medium text-center">
@@ -226,11 +225,7 @@ const SystemModules = () => {
                 </p>
                 <div className="mt-14 flex justify-center max-w-96 pb-10 mx-auto">
                   {typeof module.output == "string" ? (
-                    <img
-                      src={module.output}
-                      className="w-full mx-auto h-fit"
-                      alt="AI Feature"
-                    />
+                    <AskAstrah placeholder={module.output} />
                   ) : (
                     <GlassCard
                       Icon={module.output.Icon}
@@ -244,8 +239,8 @@ const SystemModules = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="start-10 left-10 rtl:right-10 rtl:left-auto" />
-          <CarouselNext className="end-10 right-10 rtl:left-10 rtl:right-auto" />
+          <CarouselPrevious className="start-10 left-10 rtl:rotate-180 rtl:right-10 rtl:left-auto" />
+          <CarouselNext className="end-10 right-10 rtl:rotate-180 rtl:left-10 rtl:right-auto" />
           <CarouselDots />
         </Carousel>
       </div>
