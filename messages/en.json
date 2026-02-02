@@ -128,7 +128,7 @@
           "buttonTitle": "AI Lead Generator",
 
           "title": "AI Lead Generator",
-          "description": "Finds and ranks target companies using GCC-tuned signals and enrichment.",
+          "description": "Finds and ranks target companies worldwide using region-tuned signals and enrichment.",
           "output": {
             "title": "New company matched",
             "evidence": "Tech startup · Dubai · 84/100 score",
@@ -146,7 +146,7 @@
           "buttonTitle": "Smart Close",
 
           "title": "Smart Close",
-          "description": "Offer + payment request + embedded e-sign to close faster.",
+          "description": "Quote/Offer + embedded <bold>e-sign</bold> + Tap payment (where available)",
           "output": {
             "title": "Payment request ready",
             "evidence": "Amount: 50,000 AED",

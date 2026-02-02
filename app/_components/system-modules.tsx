@@ -94,7 +94,11 @@ const SystemModules = () => {
       iconSelected: "/icons/lamp-charge-selected.svg",
       title: t("modules.smartClose.title"),
       buttonTitle: t("modules.smartClose.buttonTitle"),
-      description: t("modules.smartClose.description"),
+      description: t.rich("modules.smartClose.description", {
+        bold: (chunk) => (
+          <span className="font-bold text-white/95">{chunk}</span>
+        ),
+      }),
       output: {
         Icon: TriangleAlert,
         title: t("modules.smartClose.output.title"),
