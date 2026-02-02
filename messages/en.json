@@ -10,6 +10,11 @@
     "english": "English",
     "arabic": "عربي"
   },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you're looking for may have been moved, renamed, or is temporarily unavailable.",
+    "button": "Go to Home"
+  },
   "footer": {
     "tagline": "Enterprise AI operating system for GCC teams turning conversations into revenue.",
     "links": {
