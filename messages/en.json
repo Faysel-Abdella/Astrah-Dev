@@ -16,7 +16,7 @@
     "button": "Go to Home"
   },
   "footer": {
-    "tagline": "Enterprise AI operating system for GCC teams turning conversations into revenue.",
+    "tagline": "An AI operating system for GCC teams turning conversations into revenue.",
     "links": {
       "title": "LINKS",
       "product": "Product",
@@ -38,7 +38,7 @@
       "button": "Contact Us"
     },
     "infra": "Infrastructure: AWS (UAE region)",
-    "copyright": "©<bold>Astrah OS</bold>, All rights reserved 2026"
+    "copyright": "©2026 <bold>Astrah OS</bold>. All rights reserved."
   },
   "landing": {
     "hero": {
