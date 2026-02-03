@@ -12,7 +12,7 @@
   },
   "notFound": {
     "title": "Page Not Found",
-    "description": "The page you're looking for may have been moved, renamed, or is temporarily unavailable.",
+    "description": "This page doesn't exist. It may have been moved or deleted.",
     "button": "Go to Home"
   },
   "footer": {
@@ -486,7 +486,7 @@
           {
             "title": "Ask Astrah:",
             "features": [
-              "Unlimited for your business data",
+              "Included for your business data",
               "General knowledge queries: 200/month"
             ]
           }
@@ -536,7 +536,7 @@
           {
             "title": "Ask Astrah:",
             "features": [
-              "Unlimited for your business data",
+              "Included for your business data",
               "General knowledge queries: 1,000/month"
             ]
           }
@@ -581,7 +581,7 @@
           {
             "title": "Ask Astrah:",
             "features": [
-              "Unlimited for your business data",
+              "Included for your business data",
               "General knowledge queries: 5,000/month"
             ]
           },
@@ -623,7 +623,7 @@
           {
             "title": "Ask Astrah:",
             "features": [
-              "Unlimited for your business data",
+              "Included for your business data",
               "General knowledge queries: 20,000/month"
             ]
           },
