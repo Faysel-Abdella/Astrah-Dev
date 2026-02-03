@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSection() {
   const t = useTranslations("landing.hero");
@@ -57,14 +58,18 @@ export default function HeroSection() {
             </div>
 
             {/* CTA Button */}
-            <button
-              className="cursor-pointer inline-block px-7 py-4  rounded-lg font-gilroy text-black md:border-0 transition-all hover:opacity-90 w-fit mt-16 "
-              style={{ backgroundColor: "#00B3C6" }}
-            >
-              {t.rich("buttonText", {
-                bold: (chunk) => <span className="font-semibold">{chunk}</span>,
-              })}
-            </button>
+            <Link href={"/contact"} className="w-fit mt-16">
+              <button
+                className="cursor-pointer inline-block px-7 py-4  rounded-lg font-gilroy text-black md:border-0 transition-all hover:opacity-90 w-fit  "
+                style={{ backgroundColor: "#00B3C6" }}
+              >
+                {t.rich("buttonText", {
+                  bold: (chunk) => (
+                    <span className="font-semibold">{chunk}</span>
+                  ),
+                })}
+              </button>
+            </Link>
           </div>
 
           {/* Right visual - anchored bottom-right */}

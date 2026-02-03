@@ -116,7 +116,6 @@ const FeatureShowcase = () => {
             <ul className="text-muted-foreground list-disc ps-5 mt-4 max-md:max-w-sm text-start">
               <li>{t("cash.list1")}</li>
               <li>{t("cash.list2")}</li>
-              <li>{t("cash.list3")}</li>
             </ul>
           </div>
           <div className="md:w-1/2 flex items-center">
