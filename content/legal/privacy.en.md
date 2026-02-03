@@ -185,7 +185,9 @@ Material changes will be communicated through the Astrah OS website or platform 
 
 ## Contact
 
-Questions or requests related to privacy or data protection may be submitted through official Astrah OS communication channels.
+Questions or requests related to privacy or data protection may be submitted via email at:
+
+**[legal@astrah.net](mailto:legal@astrah.net)**
 
 ---
 

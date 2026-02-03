@@ -56,10 +56,15 @@ const Hero = () => {
                 </p>
                 <div className=" text-sm leading-relaxed items-center flex mt-3 gap-2 max-w-72">
                   <Send size={18} />{" "}
-                  <p className="text-muted-foreground">hello@astrah.net</p>
+                  <a
+                    href="mailto:hello@astrah.net"
+                    className="text-muted-foreground"
+                  >
+                    hello@astrah.net
+                  </a>
                 </div>
               </div>
-              <div className="ps-5 mt-10">
+              {/* <div className="ps-5 mt-10">
                 <p className="font-medium text-base">
                   {t("direct.whatsappLabel")}
                 </p>
@@ -67,7 +72,7 @@ const Hero = () => {
                   <PhoneCall size={18} />{" "}
                   <p className="text-muted-foreground">+251947344248</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <p className="text-muted-foreground mt-8">{t("direct.footer")}</p>

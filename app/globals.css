@@ -19,15 +19,25 @@
   border-radius: 8px;
   background-color: #11151a;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+
 :root {
   /* Updated all cyan colors to exact #00d4ff */
   --background: oklch(0.1683 0.0181 263.9);
   --foreground: #ffffff;
   --card: oklch(0.2 0.0216 263.9);
   --card-secondary: #111620;
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.97 0 0);
   --popover: oklch(0.2 0.0216 263.9);
-  --popover-foreground: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.97 0 0);
   --primary: #00d4ff;
   --primary-foreground: #000000;
   --secondary: oklch(0.97 0 0);

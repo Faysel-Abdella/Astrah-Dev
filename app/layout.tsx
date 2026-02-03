@@ -9,6 +9,7 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import type React from "react";
 import "./globals.css";
+import { Toaster } from "sonner";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -139,6 +140,15 @@ export default async function RootLayout({
           <Header />
           {children}
           <Footer />
+          <Toaster
+            style={
+              {
+                "--normal-bg": "var(--popover)",
+                "--normal-text": "var(--popover-foreground)",
+                "--normal-border": "var(--border)",
+              } as React.CSSProperties
+            }
+          />
         </NextIntlClientProvider>
         <Analytics />
       </body>

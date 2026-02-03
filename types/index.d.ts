@@ -56,3 +56,15 @@ interface RangePricePlan extends BasePlan {
 }
 
 export type PricingPlan = FixedPricePlan | RangePricePlan;
+
+export interface ContactData {
+  fullName: string;
+  companyName: string;
+  country: string;
+  teamSize?: string; // Optional as per your interface
+  email: string;
+  whatsappNumber: string;
+  purpose: string;
+  currentSystem: string;
+  preferedLanguage: string;
+}

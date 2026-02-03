@@ -8,7 +8,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 import { cn } from "@/lib/utils";
-import { toast } from "sonner";
 import {
   Select,
   SelectContent,
@@ -18,6 +17,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import GlowCard from "@/components/glow-card";
+import { sendMailAction } from "@/action/sendMailAction";
+import { toast } from "sonner";
 
 export interface ContactData {
   fullName: string;
@@ -95,7 +96,7 @@ const ContactUsForm = ({ className }: ContactMeFormProps) => {
     setIsLoading(true);
 
     try {
-      console.log(contactData);
+      await sendMailAction(contactData);
       setFormData(initialData);
       toast.success(t("alerts.success"));
     } catch (err: unknown) {
@@ -146,7 +147,6 @@ const ContactUsForm = ({ className }: ContactMeFormProps) => {
       !trimmedData.currentSystem ||
       !trimmedData.preferedLanguage
     ) {
-      console.error("Please fill all required fields");
       toast.error(t("alerts.validation"));
       return;
     }
@@ -191,7 +191,7 @@ const ContactUsForm = ({ className }: ContactMeFormProps) => {
             </label>
             <Input
               className={cn("w-full")}
-              placeholder={t("placeholders.companyName")}
+              // placeholder={t("placeholders.companyName")}
               value={formData.companyName}
               name="companyName"
               required
