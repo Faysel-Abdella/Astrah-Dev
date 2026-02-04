@@ -49,6 +49,7 @@ const StyledAstrix = () => <span className="text-sky-400">*</span>;
 interface ContactMeFormProps {
   className?: string;
 }
+
 const countries = [
   { name: "UAE", value: "AE" },
   { name: "KSA", value: "SA" },
@@ -56,6 +57,7 @@ const countries = [
   { name: "Kuwait", value: "KW" },
   { name: "Bahrain", value: "BH" },
   { name: "Oman", value: "OM" },
+  { name: "MENA (non-GCC)", value: "mena_non_gcc" },
   { name: "Other", value: "other" },
 ];
 

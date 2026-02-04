@@ -1,4 +1,3 @@
-import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
@@ -8,8 +7,10 @@ import localFont from "next/font/local";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import type React from "react";
-import "./globals.css";
 import { Toaster } from "sonner";
+import "./globals.css";
+
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -22,7 +23,13 @@ export async function generateMetadata(): Promise<Metadata> {
   const description = t("description");
 
   return {
-    // This now dynamically scales based on your environment
+    icons: {
+      icon: [
+        { url: "/favicon.ico" },
+        { url: "/icon.svg", type: "image/svg+xml" },
+      ],
+      apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    },
     metadataBase: new URL(siteUrl),
 
     title: {
@@ -140,6 +147,8 @@ export default async function RootLayout({
   const isRTL = locale === "ar";
 
   const defaultFont = locale === "ar" ? sfArabic : sfPro;
+
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
   return (
     <html lang={locale} dir={isRTL ? "rtl" : "ltr"} suppressHydrationWarning>
       <head>
@@ -166,8 +175,8 @@ export default async function RootLayout({
             }
           />
         </NextIntlClientProvider>
-        <Analytics />
       </body>
+      {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
   );
 }
