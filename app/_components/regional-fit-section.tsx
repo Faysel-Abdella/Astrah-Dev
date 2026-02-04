@@ -43,7 +43,7 @@ export default function RegionalFitSection() {
             {features.map((feature, index) => (
               <GlowCard
                 key={feature.id}
-                className="flex break-inside-avoid   flex-col   gap-4   py-5 px-10.5  items-center"
+                className="flex break-inside-avoid   flex-col   gap-6   py-5 px-10.5  items-center"
                 outerClassName="mb-6 h-full flex-1 flex "
                 glowDirection={index == 0 || index == 3 ? "top" : "bottom"}
               >

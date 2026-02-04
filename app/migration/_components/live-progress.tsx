@@ -31,7 +31,7 @@ const LiveProgress = () => {
                 <p className="text-xl text-white/40">{principle.label}</p>
               </div>
               <p className="text-lg font-medium mt-6 ">{principle.title}</p>
-              <ul className="text-muted-foreground list-disc mt-4 ps-6 ">
+              <ul className="text-muted-foreground list-disc mt-5 ps-6 ">
                 {principle.steps.map((step, index) => (
                   <li key={index}>{step}</li>
                 ))}

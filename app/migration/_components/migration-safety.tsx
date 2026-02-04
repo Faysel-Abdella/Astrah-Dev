@@ -39,7 +39,7 @@ const MigrationSafety = () => {
               glowDirection={glowDirections[index]}
             >
               <StyledIcon Icon={icons[index]} />
-              <p className="text-lg font-medium mt-6 ">{label}</p>
+              <p className="text-lg font-medium mt-8 ">{label}</p>
             </GlowCard>
           ))}
         </div>

@@ -23,7 +23,7 @@ export default function Requirments() {
               <GlowCard
                 key={index}
                 outerClassName="h-full  mb-4 flex-1"
-                className="flex     flex-col gap-4  py-5 px-8 items-center"
+                className="flex     flex-col gap-6  py-5 px-8 items-center"
                 glowDirection={index == 0 || index == 3 ? "top" : "bottom"}
               >
                 <StyledIcon Icon={icons[index]} />

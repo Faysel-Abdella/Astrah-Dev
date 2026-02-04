@@ -59,7 +59,7 @@ export default function RegionalFit() {
               <GlowCard
                 key={feature.id}
                 outerClassName="h-full  mb-4 flex-1"
-                className="flex   flex-col gap-4   py-5 px-5  items-center"
+                className="flex   flex-col gap-6   py-5 px-5  items-center"
                 glowDirection={feature.glowDirection}
               >
                 <StyledIcon Icon={feature.icon} />
