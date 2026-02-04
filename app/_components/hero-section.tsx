@@ -19,19 +19,16 @@ export default function HeroSection() {
             {/* Tagline */}
             <div className="flex items-center gap-2.5 mb-7">
               <span className="inline-block w-1.5 h-1.5 md:w-1.5 md:h-1.5 bg-white rounded-full shrink-0" />
-              <span
-                className="text-xs md:text-base text-muted-foreground font-light font-sf-pro tracking-[0.44px] uppercase"
-                style={{ letterSpacing: "4%" }}
-              >
+              <span className="text-xs md:text-base text-muted-foreground font-light font-sf-pro tracking-[0.44px] uppercase">
                 {t("tagline")}
               </span>
             </div>
 
             {/* Main Heading - 56px with 120% line height (no forced line breaks) */}
-            <h1 className="text-[1.67rem] md:text-[2.67rem] lg:text-[3.35rem]  tracking-tight font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white">
+            <h1 className="text-[27px] md:text-[40px] lg:text-[53px]  tracking-tight font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white">
               {t("mainHeading")}
             </h1>
-            <h1 className="-mt-10 max-lg:-mt-9 rtl:-mt-6 rtl:max-md:-mt-7 text-[1.67rem] md:text-[2.67rem] lg:text-[3.35rem]  tracking-tight font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white">
+            <h1 className="-mt-10 max-lg:-mt-9 rtl:-mt-6 rtl:max-md:-mt-7 text-[27px] md:text-[40px] lg:text-[53px]   tracking-tight font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white">
               {t("mainHeading2")}
             </h1>
 
