@@ -34,34 +34,8 @@ const GlassCard = ({
         )}
       >
         <div className="p-6 relative rounded-2xl bg-card  overflow-hidden  flex  shadow-[inset_0_0px_20px_rgba(255,255,255,1)]    group-hover:shimmer shimmer-bg  shimmer-repeat-delay-10000  shimmer-speed-1500    transition-all group-hover:bg-card duration-300   shimmer-color-white/10 shimmer-spread-500 shadow-primary/5 ">
-          <div className=" absolute w-full h-full overflow-hidden  top-0 left-0 opacity-8 rounded-2xl ">
-            <svg id="noice" className="w-full">
-              <filter id="noise-filter">
-                <feTurbulence
-                  type="fractalNoise"
-                  baseFrequency="1.34"
-                  numOctaves="4"
-                  stitchTiles="stitch"
-                ></feTurbulence>
-                <feColorMatrix type="saturate" values="0"></feColorMatrix>
-                <feComponentTransfer>
-                  <feFuncR type="linear" slope="0.46"></feFuncR>
-                  <feFuncG type="linear" slope="0.46"></feFuncG>
-                  <feFuncB type="linear" slope="0.46"></feFuncB>
-                  <feFuncA type="linear" slope="0.56"></feFuncA>
-                </feComponentTransfer>
-                <feComponentTransfer>
-                  <feFuncR type="linear" slope="1.47" intercept="-0.23" />
-                  <feFuncG type="linear" slope="1.47" intercept="-0.23" />
-                  <feFuncB type="linear" slope="1.47" intercept="-0.23" />
-                </feComponentTransfer>
-              </filter>
-              <rect
-                width="100%"
-                height="100%"
-                filter="url(#noise-filter)"
-              ></rect>
-            </svg>
+          <div className=" absolute w-full h-full overflow-hidden  top-0 left-0 opacity-10 rounded-2xl ">
+            <img src={"/noise.png"} className="w-full h-full object-cover" />
           </div>
           <div
             className={cn(

@@ -29,6 +29,19 @@ input:-webkit-autofill:active {
   caret-color: #ffffff !important;
 }
 
+/* Create a reusable class for the noise layer */
+.noise-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.05; /* Adjust for subtlety */
+  background-repeat: repeat;
+  /* Use a tiny 100x100px noise PNG */
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+}
+
 :root {
   /* Updated all cyan colors to exact #00d4ff */
   --background: oklch(0.1683 0.0181 263.9);
