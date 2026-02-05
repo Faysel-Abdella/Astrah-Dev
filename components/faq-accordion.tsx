@@ -65,7 +65,9 @@ const FAQAccordion = ({ faqData }: FAQAccordionProps) => {
               </AccordionTrigger>
 
               <AccordionContent className="flex flex-col  p-0 pt-4">
-                <p className="text-start text-muted-foreground">{faq.answer}</p>
+                <p className="text-start text-muted-foreground whitespace-pre-line">
+                  {faq.answer}
+                </p>
               </AccordionContent>
             </GlowCard>
           </AccordionItem>

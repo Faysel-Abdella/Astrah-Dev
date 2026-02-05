@@ -740,7 +740,7 @@
         {
           "id": "faq3",
           "question": "Is migration included?",
-          "answer": "Starter has a one-time migration fee. Business and Pro include migration."
+          "answer": "Starter: migration is a one-time paid add-on \nBusiness + Pro: migration included (standard scope) \nEnterprise: migration is scoped during onboarding (complex environments scoped separately)"
         }
       ]
     },
