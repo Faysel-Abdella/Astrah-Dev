@@ -141,7 +141,7 @@ const SystemModules = () => {
       className="section-container w-full font-sf-pro scroll-mt-24"
     >
       <div className="section-content flex flex-col items-center">
-        <p className="font-semibold md:font-medium text-3xl md:text-[40px] text-center">
+        <p className="font-semibold md:font-medium text-3xl md:text-[40px] text-center tracking[-0.02em] md:tracking-tight">
           {t("sectionTitle")}
         </p>
         <p className="text-muted-foreground mt-6 text-center">

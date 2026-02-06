@@ -15,7 +15,7 @@ const Founder = () => {
             <div className="flex text-muted-foreground text-sm md:text-base items-center">
               <Dot size={26} /> <span>{t("label")}</span>
             </div>
-            <p className=" text-3xl md:text-[53px] font-medium   mt-5 ">
+            <p className=" text-3xl md:text-[53px] font-medium   mt-5 tracking[-0.02em] md:tracking-tight">
               {t("name")}
             </p>
             <p className="text-muted-foreground mt-6">{t("title")}</p>

@@ -6,7 +6,7 @@ const YourCRM = () => {
   return (
     <section className="section-container bg-[#070B13] py-20 w-full  font-sf-pro">
       <div className="max-w-2xl text-center mx-auto">
-        <p className=" font-semibold md:font-medium text-3xl md:text-[40px]">
+        <p className=" font-semibold md:font-medium text-3xl md:text-[40px] tracking[-0.02em] md:tracking-tight">
           {t("title")}
         </p>
         <p className="text-muted-foreground mt-6">

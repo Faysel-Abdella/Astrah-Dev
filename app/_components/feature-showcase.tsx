@@ -45,7 +45,7 @@ const FeatureShowcase = () => {
       <div className="section-content  flex flex-col gap-30 items-center ">
         <div className="flex w-full gap-10 md:gap-20 max-md:flex-col md:justify-between  ">
           <div className="md:w-1/2 flex flex-col  justify-center  ">
-            <p className="font-medium text-3xl md:text-[40px]">
+            <p className="font-medium text-3xl md:text-[40px] tracking-tight">
               {t("demand.title")}
             </p>
             <p className="text-muted-foreground mt-6 max-w-133">

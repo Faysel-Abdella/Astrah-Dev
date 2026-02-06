@@ -11,7 +11,7 @@ const BillingAndTrials = () => {
     <section className="section-container">
       <div className="section-content ">
         <div className="flex w-full justify-center">
-          <p className="font-semibold md:font-medium text-3xl md:text-[40px] text-start">
+          <p className="font-semibold md:font-medium text-3xl md:text-[40px] text-start tracking[-0.02em] md:tracking-tight">
             {t("title")}
           </p>
         </div>
