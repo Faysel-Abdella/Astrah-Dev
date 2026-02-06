@@ -3,6 +3,7 @@
 import DepthCard from "@/components/depth-card";
 import GlowCard from "@/components/glow-card";
 import StyledIcon from "@/components/styled-icon";
+import { cn } from "@/lib/utils";
 import { FileUp, List, Timer, CheckSquare } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -18,16 +19,24 @@ export default function Requirments() {
           {t("title")}
         </p>
         <div className=" w-full lg:w-2/3">
-          <div className=" md:columns-2 gap-8 ">
+          <div className=" md:columns-2 gap-6 ">
             {items.map((content, index) => (
               <GlowCard
                 key={index}
-                outerClassName="h-full  mb-4 flex-1"
+                outerClassName="h-full  mb-6 flex-1"
                 className="flex     flex-col gap-6  py-5 px-8 items-center"
                 glowDirection={index == 0 || index == 3 ? "top" : "bottom"}
               >
                 <StyledIcon Icon={icons[index]} />
-                <p className="text-muted-foreground text-center ">{content}</p>
+                <p
+                  className={cn(
+                    "text-muted-foreground text-center ",
+                    index == 0 && "md:max-w-55 md:rtl:max-w-50",
+                    index == 1 && "md:rtl:max-w-45",
+                  )}
+                >
+                  {content}
+                </p>
               </GlowCard>
             ))}
           </div>

@@ -45,7 +45,7 @@ const GlowCard = ({
   return (
     <div
       className={cn(
-        "relative w-full h-full rounded-2xl bg-linear-to-br from-white/10 via-primary/30 to-white/10 p-px  overflow-hidden",
+        "relative w-full h-full rounded-2xl rtl:leading bg-linear-to-br from-white/10 via-primary/30 to-white/10 p-px  overflow-hidden",
         outerClassName,
       )}
     >
