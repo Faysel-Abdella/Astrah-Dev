@@ -38,7 +38,7 @@ const Founder = () => {
               src="/images/founder.png"
               alt="Founder"
               fill
-              className="object-cover rtl:scale-x-[-1]"
+              className="object-cover "
             />
             <div className="absolute inset-0 bg-background h-full w-full mix-blend-color" />
           </div>
