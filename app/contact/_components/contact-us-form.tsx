@@ -19,6 +19,7 @@ import {
 import GlowCard from "@/components/glow-card";
 import { sendMailAction } from "@/action/sendMailAction";
 import { toast } from "sonner";
+import { useSearchParams } from "next/navigation";
 
 export interface ContactData {
   fullName: string;
@@ -94,6 +95,9 @@ const languages = [
 ];
 
 const ContactUsForm = ({ className }: ContactMeFormProps) => {
+  const searchParams = useSearchParams();
+  const intent = searchParams.get("intent") || undefined;
+  const plan = searchParams.get("plan") || undefined;
   const t = useTranslations("contactUs.form");
   const [formData, setFormData] = useState<ContactData>(initialData);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -102,7 +106,11 @@ const ContactUsForm = ({ className }: ContactMeFormProps) => {
     setIsLoading(true);
 
     try {
-      await sendMailAction(contactData);
+      await sendMailAction({
+        plan,
+        intent,
+        contactData,
+      });
       setFormData(initialData);
       toast.success(t("alerts.success"));
     } catch (err: unknown) {

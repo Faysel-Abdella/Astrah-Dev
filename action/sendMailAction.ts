@@ -5,7 +5,37 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function sendMailAction(contactData: ContactData) {
+interface sendMailActionProps {
+  plan?: string;
+  intent?: string;
+  contactData: ContactData;
+}
+const buildEmailSubject = ({
+  fullName,
+  companyName,
+  intent,
+  plan,
+}: {
+  fullName: string;
+  companyName: string;
+  intent?: string;
+  plan?: string;
+}) => {
+  const parts = [
+    `Astrah Website Lead`,
+    `${fullName} from ${companyName}`,
+    intent && `intent=${intent.toLowerCase()}`,
+    plan && `plan=${plan.toLocaleLowerCase()}`,
+  ].filter(Boolean);
+
+  return parts.join(" | ");
+};
+
+export async function sendMailAction({
+  contactData,
+  intent,
+  plan,
+}: sendMailActionProps) {
   // Basic validation to ensure environment variables exist
   if (!process.env.RESEND_API_KEY || !process.env.CONTACT_RECEIVER_EMAIL) {
     return { success: false, error: "Server configuration error." };
@@ -24,10 +54,12 @@ export async function sendMailAction(contactData: ContactData) {
       preferedLanguage,
     } = contactData;
 
+    const subject = buildEmailSubject({ companyName, fullName, intent, plan });
+
     await resend.emails.send({
       from: "Astrah OS Leads <onboarding@resend.dev>", // Replace with your domain once verified
       to: [process.env.CONTACT_RECEIVER_EMAIL],
-      subject: `🚀 New Lead: ${fullName} from ${companyName}`,
+      subject,
       replyTo: email,
       html: `
         <div style="font-family: sans-serif; line-height: 1.5; color: #333;">

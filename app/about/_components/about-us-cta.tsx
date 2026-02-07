@@ -20,7 +20,7 @@ const AboutUsCTA = () => {
           </p>
           <div className="flex mt-10 gap-5 ">
             <Button className=" font-gilroy h-13.5 px-7" asChild>
-              <Link href="/contact">
+              <Link href="/contact?intent=talk">
                 {tHeader.rich("talkToAstrah", {
                   bold: (chunks) => <span className="font-bold">{chunks}</span>,
                 })}

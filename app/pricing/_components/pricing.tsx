@@ -275,7 +275,14 @@ const Pricing = () => {
                 {plan.tagline}
               </p>
 
-              <Link href={"/contact"} className={cn("mt-5 w-full")}>
+              <Link
+                href={
+                  isEnterprisePlan(plan.id)
+                    ? `/contact?intent=talk&plan=${plan.id}`
+                    : `/contact?intent=trial&plan=${plan.id}`
+                }
+                className={cn("mt-5 w-full")}
+              >
                 <button
                   className={cn(
                     "bg-third-background border  border-white/10 w-full py-3 rounded-lg text-sm transition-colors hover:bg-white/5",

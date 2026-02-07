@@ -56,7 +56,7 @@ export default function HeroSection() {
             </div>
 
             {/* CTA Button */}
-            <Link href={"/contact"} className="w-fit mt-16">
+            <Link href={"/contact?intent=talk"} className="w-fit mt-16">
               <button
                 className="cursor-pointer inline-block px-7 py-4  rounded-lg font-gilroy text-black md:border-0 transition-all hover:opacity-90 w-fit  "
                 style={{ backgroundColor: "#00B3C6" }}

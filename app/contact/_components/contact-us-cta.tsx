@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const ContactUsCTA = () => {
   const t = useTranslations("contactUs.cta");
@@ -19,8 +20,9 @@ const ContactUsCTA = () => {
             <Button
               variant="outline"
               className=" border-white px-7 shadow-[inset_0_0px_20px_rgba(0,179,198,0.1)] font-sf-pro text-sm text-white/75 h-13.5 hover:border-primary rounded-md"
+              asChild
             >
-              {t("secondaryButton")}
+              <Link href={"/#product"}>{t("secondaryButton")}</Link>
             </Button>
           </div>
           <div className="w-1/3 -top-40 blur-[150px] rounded-full absolute h-40 bg-white/10"></div>

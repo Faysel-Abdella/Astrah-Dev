@@ -167,7 +167,11 @@ const PlanModal = ({
 
                 <div className="h-px w-full bg-border shrink-0 my-6"></div>
                 <Link
-                  href={"/contact"}
+                  href={
+                    isEnterprisePlan(id)
+                      ? `/contact?intent=talk&plan=${id}`
+                      : `/contact?intent=trial&plan=${id}`
+                  }
                   className={cn(
                     " w-full",
                     isEnterprisePlan(id) && "max-md:mt-37",
@@ -265,7 +269,14 @@ const PlanModal = ({
                 )}
 
                 <div className="h-px w-full bg-border shrink-0 my-6"></div>
-                <Link href={"/contact"} className={cn(" w-full")}>
+                <Link
+                  href={
+                    isEnterprisePlan(id)
+                      ? `/contact?intent=talk&plan=${id}`
+                      : `/contact?intent=trial&plan=${id}`
+                  }
+                  className={cn(" w-full")}
+                >
                   <button
                     className={cn(
                       "bg-third-background border  border-white/10 w-full py-3 rounded-lg text-sm font-medium transition-colors hover:bg-white/5",
