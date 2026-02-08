@@ -66,7 +66,9 @@ const Footer = () => {
                   className=" border-white px-7 font-sf-pro text-sm shadow-[inset_0_0px_20px_rgba(0,179,198,0.1)]  text-white/75  h-10 hover:border-primary rounded-md"
                   asChild
                 >
-                  <Link href={"/contact"}>{t(section.buttonKey)}</Link>
+                  <Link href={"/contact?intent=talk"}>
+                    {t(section.buttonKey)}
+                  </Link>
                 </Button>
               )}
               {section.links && (
