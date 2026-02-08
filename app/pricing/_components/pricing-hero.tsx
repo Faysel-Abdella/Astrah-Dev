@@ -17,8 +17,9 @@ const PricingHero = () => {
           {t("title")}
         </p>
         <p className="text-muted-foreground mt-5 max-w-xl ">
-          {t("description")}
+          {t("description1")} <br /> {t("description2")}
         </p>
+
         <div className="flex mt-10 gap-5 ">
           <Button className="   h-13.5 px-7" asChild>
             <Link href="/contact?intent=trial">{t("primaryCta")}</Link>

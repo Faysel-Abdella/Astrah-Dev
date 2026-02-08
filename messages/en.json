@@ -463,7 +463,8 @@
     "hero": {
       "badge": "PRICING",
       "title": "Transparent pricing for GCC operators.",
-      "description": "Astrah OS is built for WhatsApp-first revenue teams in the Gulf. Choose a plan that matches your volume and intelligence needs.",
+      "description1": "Astrah OS is built for WhatsApp-first revenue teams in the Gulf.",
+      "description2": " Choose a plan that matches your volume and intelligence needs.",
       "primaryCta": "Start Free Trial",
       "secondaryCta": "Talk to Astrah",
       "footer": "Operating outside the GCC? We offer regional pricing for MENA.<bold> Talk to us.</bold>"
