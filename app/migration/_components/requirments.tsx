@@ -16,7 +16,7 @@ export default function Requirments() {
     <section className="section-container relative font-sf-pro">
       <div className="section-content flex gap-10 items-center max-lg:flex-col max-lg:justify-center">
         <p className=" text-3xl md:text-[40px] tracking[-0.02em] md:tracking-tight font-semibold md:font-medium lg:w-1/3 max-lg:text-center">
-          {t("title")}
+          {t.rich("title", { br: (chunk) => <br className="sm:hidden"></br> })}
         </p>
         <div className=" w-full lg:w-2/3">
           <div className=" md:columns-2 gap-6 ">

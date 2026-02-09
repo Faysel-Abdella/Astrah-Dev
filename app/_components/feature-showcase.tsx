@@ -44,7 +44,7 @@ const FeatureShowcase = () => {
     <section id="product" className="relative section-container  font-sf-pro">
       <div className="section-content  flex flex-col gap-30 items-center ">
         <div className="flex w-full gap-10 md:gap-20 max-md:flex-col md:justify-between  ">
-          <div className="md:w-1/2 flex flex-col  justify-center  ">
+          <div className="md:w-1/2 flex flex-col  justify-center  max-md:items-center max-md:text-center ">
             <p className="font-medium text-3xl md:text-[40px] tracking-tight">
               {t("demand.title")}
             </p>
@@ -68,7 +68,7 @@ const FeatureShowcase = () => {
           </div>
         </div>
         <div className="flex w-full gap-10 md:gap-20  flex-row-reverse max-md:flex-col ">
-          <div className="md:w-1/2 flex flex-col  justify-center  ">
+          <div className="md:w-1/2 flex flex-col  justify-center  max-md:items-center max-md:text-center ">
             <p className="font-medium text-3xl md:text-[40px]">
               {t("revenue.title")}
             </p>
@@ -91,7 +91,7 @@ const FeatureShowcase = () => {
           </div>
         </div>
         <div className="flex w-full gap-10 md:gap-20  max-md:flex-col ">
-          <div className="md:w-1/2 flex flex-col  justify-center  ">
+          <div className="md:w-1/2 flex flex-col  justify-center  max-md:items-center max-md:text-center ">
             <p className="font-medium text-3xl md:text-[40px]">
               {t("inbox.title")}
             </p>
@@ -108,8 +108,8 @@ const FeatureShowcase = () => {
           </div>
         </div>
         <div className="flex w-full gap-10 md:gap-20 flex-row-reverse max-md:flex-col ">
-          <div className="md:w-1/2 flex flex-col  justify-center  ">
-            <p className="font-medium text-3xl md:text-[40px]  mt-6 md:mt-8 lg:mt-10">
+          <div className="md:w-1/2 flex flex-col  justify-center  max-md:items-center max-md:text-center   ">
+            <p className="font-medium text-3xl md:text-[40px]  mt-6 md:mt-8 lg:mt-10 max-sm:max-w-60">
               {t("cash.title")}
             </p>
             <p className="text-muted-foreground mt-6">{t("cash.desc")}</p>
@@ -129,12 +129,14 @@ const FeatureShowcase = () => {
           </div>
         </div>
         <div className="flex w-full  gap-10 md:gap-20 max-md:flex-col ">
-          <div className="md:w-1/2 flex flex-col  justify-center  ">
+          <div className="md:w-1/2 flex flex-col  justify-center  max-md:items-center max-md:text-center ">
             <p className="font-medium  text-3xl md:text-[40px]">
               {t("alive.title")}
             </p>
             <p className="text-muted-foreground mt-6">{t("alive.desc1")}</p>
-            <p className="text-muted-foreground mt-6">{t("alive.desc2")}</p>
+            <p className="text-muted-foreground mt-3 md:mt-6">
+              {t("alive.desc2")}
+            </p>
           </div>
           <div className="md:w-1/2">
             <GlassCard

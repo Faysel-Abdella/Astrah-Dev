@@ -109,7 +109,7 @@
       "ai": "AI that monitors deals, silence, and momentum"
     },
     "crm": {
-      "title": "Your CRM is lying to you.",
+      "title": "Your CRM <br></br> is lying to you.",
       "p1": "WhatsApp messages are ignored. Follow-ups are missed. Deals die in silence.",
       "p2": "Traditional CRMs are databases that rely on manual entry. They don't see conversations.",
       "p3": "They don't see silence. They don't see risk.",
@@ -127,7 +127,6 @@
       "modules": {
         "whatsapp": {
           "buttonTitle": "WhatsApp Intelligence",
-
           "title": "WhatsApp Intelligence",
           "description": "Turns WhatsApp threads into structured CRM activity (summaries, signals, follow-ups)",
           "output": {
@@ -138,7 +137,6 @@
         },
         "dealHealth": {
           "buttonTitle": "Deal Health",
-
           "title": "Deal Health",
           "description": "Detects risk early (silence + stagnation) and recommends the next best action.",
           "output": {
@@ -149,7 +147,6 @@
         },
         "inboxZero": {
           "buttonTitle": "AI Inbox Zero",
-
           "title": "AI Inbox Zero",
           "description": "Unified view that triages conversations and produces next steps.",
           "output": {
@@ -160,7 +157,6 @@
         },
         "priorityQueue": {
           "buttonTitle": "AI Priority Queue",
-
           "title": "AI Priority Queue",
           "description": "Ranks what to do now across deals and chats so nothing slips.",
           "output": {
@@ -171,7 +167,6 @@
         },
         "leadGen": {
           "buttonTitle": "AI Lead Generator",
-
           "title": "AI Lead Generator",
           "description": "Finds and ranks target companies worldwide using region-tuned signals and enrichment.",
           "output": {
@@ -182,14 +177,12 @@
         },
         "askAstrah": {
           "buttonTitle": "Ask Astrah (Orb AI Assistant)",
-
           "title": "Ask Astrah (Orb AI Assistant)",
           "description": "Answers across CRM + WhatsApp + docs, with optional general knowledge mode.",
           "placeholder": "Ask anything about your pipeline, deals, or next steps..."
         },
         "smartClose": {
           "buttonTitle": "Smart Close",
-
           "title": "Smart Close",
           "description": "Quote/Offer + embedded e-sign (BoldSign) + Tap payment (where available)",
           "output": {
@@ -258,7 +251,7 @@
       }
     },
     "migration": {
-      "title": "Go live in days, not weeks.",
+      "title": "Go live in days,<br></br> not weeks.",
       "desc-1": "Most standard migrations go live in ~72 hours.",
       "desc-2": "Complex environments are scoped separately.",
       "cta": "View Migration"
@@ -276,7 +269,7 @@
       "p3": "Astrah OS exists to make revenue execution feel controlled."
     },
     "principles": {
-      "mainTitle": "Not a tool. An operating layer.",
+      "mainTitle": "Not a tool. <br></br>An operating layer.",
       "combines": "Astrah OS combines:",
       "list": {
         "crm": "CRM foundations (contacts, deals, tasks)",
@@ -338,14 +331,15 @@
       }
     },
     "cta": {
-      "description": "If you want to see how Astrah OS fits your pipeline and workflows, talk to us."
+      "title": "A system built for<br></br> the Gulf.",
+      "description": "If you want to see how Astrah OS fits your pipeline and workflows, talk to us.",
+      "viewProduct": "View Product"
     }
   },
   "migration": {
     "hero": {
       "badge": "MIGRATION",
       "title": "Go live in days, not weeks.",
-
       "description-1": "Most standard migrations go live in ~72 hours.",
       "description-2": " Complex environments are scoped separately.",
       "cta": "See what's included"
@@ -353,7 +347,10 @@
     "comparison": {
       "title": "Migration isn't hard. Bad migration is.",
       "sub": "Most CRM migrations fail for two reasons:",
-      "reasons": ["Dirty data", "Broken workflows"],
+      "reasons": [
+        "Dirty data",
+        "Broken workflows"
+      ],
       "description": "Astrah migration is designed to prevent both. \n We migrate the data and validate the operating flow so your team can actually use it on day one.",
       "cardTitle": "What we migrate.",
       "cardSub": "For standard migrations, we move and map the core objects you need to operate immediately:",
@@ -401,7 +398,7 @@
       ]
     },
     "requirements": {
-      "title": "What we need from you.",
+      "title": "What we need <br></br> from you.",
       "items": [
         "Access to exports (CSV) or admin access to your existing CRM",
         "One point of contact for quick approvals",
@@ -608,7 +605,9 @@
           },
           {
             "title": "Advanced Integrations:",
-            "features": ["Integrations (Make.com + Webhooks)"]
+            "features": [
+              "Integrations (Make.com + Webhooks)"
+            ]
           },
           {
             "title": "Support:",
@@ -627,7 +626,9 @@
           },
           {
             "title": "Lead Generator:",
-            "features": ["2,000 leads/month"]
+            "features": [
+              "2,000 leads/month"
+            ]
           }
         ]
       },
@@ -669,7 +670,9 @@
           },
           {
             "title": "AI Lead Generator:",
-            "features": ["5,000-10,000 leads/month"]
+            "features": [
+              "5,000-10,000 leads/month"
+            ]
           }
         ]
       }

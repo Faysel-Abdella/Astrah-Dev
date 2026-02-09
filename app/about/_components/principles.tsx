@@ -12,8 +12,10 @@ const Principles = () => {
     <section className=" section-container ">
       <div className="section-content flex gap-10 md:gap-4 max-md:flex-col max-md:items-center ">
         <div className="md:w-1/2 flex flex-col  w-full  justify-center ">
-          <p className="font-semibold md:font-medium text-3xl  md:text-[40px] text-start tracking[-0.02em] ">
-            {t("mainTitle")}
+          <p className="font-semibold md:font-medium text-3xl  md:text-[40px] text-start tracking[-0.02em] max-md:text-center ">
+            {t.rich("mainTitle", {
+              br: (chunk) => <br className="sm:hidden"></br>,
+            })}
           </p>
           <p className="text-muted-foreground mt-6 ">{t("combines")}</p>
           <ul className="text-muted-foreground list-disc ps-5 mt-4 max-md:max-w-sm text-start">
