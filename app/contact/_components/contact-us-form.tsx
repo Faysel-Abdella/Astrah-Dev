@@ -193,6 +193,7 @@ const ContactUsForm = ({ className }: ContactMeFormProps) => {
               className={cn("w-full ")}
               placeholder={t("placeholders.fullName")}
               value={formData.fullName}
+              id="name-input"
               required
               name="fullName"
               onChange={handleChange}

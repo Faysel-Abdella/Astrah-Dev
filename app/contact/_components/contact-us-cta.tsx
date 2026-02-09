@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import FocusInput from "./focus-input";
 
 const ContactUsCTA = () => {
   const t = useTranslations("contactUs.cta");
@@ -14,7 +15,9 @@ const ContactUsCTA = () => {
           </p>
 
           <div className="flex mt-10 gap-5 ">
-            <Button className="   h-13.5 px-7">{t("primaryButton")}</Button>
+            <Button className="   h-13.5 px-7" asChild>
+              <FocusInput>{t("primaryButton")}</FocusInput>
+            </Button>
             <Button
               variant="outline"
               className=" border-white px-7 shadow-[inset_0_0px_20px_rgba(0,179,198,0.1)] font-sf-pro text-sm text-white/75 h-13.5 hover:border-primary rounded-md"
