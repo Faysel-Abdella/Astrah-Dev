@@ -8,7 +8,7 @@ const OrbVideo = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.78;
+      videoRef.current.playbackRate = 0.8;
     }
   }, []);
 
@@ -19,7 +19,7 @@ const OrbVideo = () => {
   return (
     <div
       className={cn(
-        "relative w-full aspect-square  opacity-0 transition duration-500  max-lg:scale-115   overflow-hidden  mask-[radial-gradient(circle_at_center,black_60%,transparent_100%)] [-webkit-mask-image:radial-gradient(circle_at_center,black_60%,transparent_100%)]",
+        "relative w-full aspect-square h-full opacity-0 transition duration-500  max-lg:scale-115   overflow-hidden  mask-[radial-gradient(circle_at_center,black_60%,transparent_100%)] [-webkit-mask-image:radial-gradient(circle_at_center,black_60%,transparent_100%)]",
         loaded && "opacity-100",
       )}
     >
