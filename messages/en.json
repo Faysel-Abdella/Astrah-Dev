@@ -345,7 +345,7 @@
       "cta": "See what's included"
     },
     "comparison": {
-      "title": "Migration isn't hard. Bad migration is.",
+      "title": "Migration isn't hard.<br></br> Bad migration is.",
       "sub": "Most CRM migrations fail for two reasons:",
       "reasons": [
         "Dirty data",

@@ -16,8 +16,10 @@ const Comparison = () => {
     >
       <div className="section-content flex gap-10 max-md:flex-col max-md:items-center justify-between ">
         <div className="md:w-1/2 flex flex-col  w-full  justify-center max-w-133 ">
-          <p className="font-medium text-3xl  md:text-[40px] text-start tracking-tighter">
-            {t("title")}
+          <p className="font-medium text-3xl  md:text-[40px] text-center  md:text-start tracking-tighter ">
+            {t.rich("title", {
+              br: (chunk) => <br className="sm:hidden"></br>,
+            })}
           </p>
           <p className="text-muted-foreground mt-6 ">{t("sub")}</p>
           <ol className="text-muted-foreground list-decimal ps-5 mt-4 max-md:max-w-sm text-start">
