@@ -10,6 +10,7 @@ const OrbVideo = () => {
 
   useEffect(() => {
     if (videoRef.current) {
+      videoRef.current.play();
       videoRef.current.playbackRate = 0.75;
       // FIX 1: Safari requires defaultMuted to be true for autoplay to work reliably
       videoRef.current.defaultMuted = true;
@@ -32,9 +33,11 @@ const OrbVideo = () => {
         src={"/orb_clip.mp4"}
         className={cn(
           "w-full h-full object-cover",
-          // FIX 2: Hide the native play button overlay in Safari
-          "[&::-webkit-media-controls-start-playback-button]:hidden",
-          "[&::-webkit-media-controls-play-button]:hidden",
+          "[&::-webkit-media-controls-start-playback-button]:hidden!",
+          "[&::-webkit-media-controls-start-playback-button]:appearance-none!",
+          // Target the overlay play button
+          "[&::-webkit-media-controls-overlay-play-button]:hidden!",
+          "[&::-webkit-media-controls-overlay-play-button]:appearance-none!",
         )}
         autoPlay
         muted
