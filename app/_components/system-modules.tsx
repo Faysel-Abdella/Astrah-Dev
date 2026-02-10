@@ -162,7 +162,12 @@ const SystemModules = () => {
                   <p className="text-white/60 mt-6 text-center">
                     {module.description}
                   </p>
-                  <div className="mt-14 flex justify-center max-w-96 pb-10 mx-auto">
+                  <div
+                    className={cn(
+                      "mt-14 flex justify-center max-w-96 pb-10 mx-auto",
+                      typeof module.output == "string" && "mt-4",
+                    )}
+                  >
                     {typeof module.output == "string" ? (
                       <AskAstrah placeholder={module.output} />
                     ) : (

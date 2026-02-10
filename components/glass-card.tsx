@@ -17,8 +17,8 @@ const GlassCard = ({
   glowDirection = "top",
 }: GlassCardsProps) => {
   return (
-    <div className="group w-full">
-      <div className="group-hover:translate-y-1 transition-all duration-300 scale-85 blur-sm  text-muted-foreground p-6 rounded-2xl bg-card border flex ">
+    <div className="group w-full max-w-md mx-auto">
+      <div className="group-hover:translate-y-1 transition-all duration-300 scale-85 hidden blur-sm  text-muted-foreground p-6 rounded-2xl bg-card border md:flex ">
         <div className="mt-1">{<Icon />}</div>
         <div className="flex flex-col ms-5 w-full">
           <p className="text-xl leading-tight">{title}</p>
