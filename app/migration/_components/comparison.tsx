@@ -34,10 +34,10 @@ const Comparison = () => {
           </p>
         </div>
         <GlowCard
-          outerClassName="w-full md:w-1/2 bg-card h-full rounded-3xl max-w-133"
+          outerClassName="w-full md:w-1/2 bg-card h-full rounded-3xl max-md:max-w-133"
           className=" rounded-[23px]   p-8 "
         >
-          <p className="font-medium text-2xl md:text-3xl lg:text-[32px] ">
+          <p className="font-medium text-2xl md:text-3xl lg:text-[32px] text-center w-full ">
             {t("cardTitle")}
           </p>
           <p className="text-muted-foreground mt-5 ">{t("cardSub")}</p>
