@@ -13,7 +13,20 @@ import { usePathname, useRouter } from "next/navigation";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const router = useRouter();
+
   const t = useTranslations("header");
+
+  const handleTalkClick = () => {
+    const chatbase =
+      typeof window !== "undefined" &&
+      (window as Window & { chatbase?: { open?: () => void } }).chatbase;
+    if (chatbase?.open) {
+      chatbase.open();
+      return;
+    }
+    router.push("/contact?intent=talk");
+  };
 
   return (
     <header className="fixed top-0 w-full z-50 bg-background border-b border-white/5 px-6  lg:px-16">
@@ -32,15 +45,16 @@ export default function Header() {
           {/* Right section */}
           <div className="flex items-center gap-3 lg:gap-6 lg:w-1/3 justify-end">
             <LanguageToggle />
-            <Link href="/contact?intent=talk">
-              <button className="cursor-pointer hidden lg:inline-block px-7 py-4 border-[1.5px] border-primary text-white rounded-lg hover:bg-white/10 transition-colors    text-sm">
-                {t.rich("talkToAstrah", {
-                  bold: (chunk) => (
-                    <span className="font-semibold">{chunk}</span>
-                  ),
-                })}
-              </button>
-            </Link>
+            {/* If the window.chatbase is loaded open it by window.chatbase?.open(); otherwise fallback to contact page */}
+            <button
+              type="button"
+              onClick={handleTalkClick}
+              className="cursor-pointer hidden lg:inline-block px-7 py-4 border-[1.5px] border-primary text-white rounded-lg hover:bg-white/10 transition-colors text-sm"
+            >
+              {t.rich("talkToAstrah", {
+                bold: (chunk) => <span className="font-semibold">{chunk}</span>,
+              })}
+            </button>
             <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
         </div>
@@ -62,6 +76,18 @@ function MobileMenuPanel({
   const t = useTranslations("header");
   const closeMenu = () => {
     setIsOpen(false);
+  };
+
+  const handleTalkClick = () => {
+    closeMenu();
+    const chatbase =
+      typeof window !== "undefined" &&
+      (window as Window & { chatbase?: { open?: () => void } }).chatbase;
+    if (chatbase?.open) {
+      chatbase.open();
+      return;
+    }
+    router.push("/contact?intent=talk");
   };
 
   const mobileMenuItems = [
@@ -106,16 +132,16 @@ function MobileMenuPanel({
             {item.label}
           </Link>
         ))}
-        <Link href="/contact?intent=talk" onClick={closeMenu}>
-          <button
-            className="cursor-pointer w-full mt-4 px-4 py-2.5 rounded-md font-medium transition-colors text-black"
-            style={{ backgroundColor: "#00d4ff" }}
-          >
-            {t.rich("talkToAstrah", {
-              bold: (chunk) => <span className="font-semibold">{chunk}</span>,
-            })}
-          </button>
-        </Link>
+        <button
+          type="button"
+          onClick={handleTalkClick}
+          className="cursor-pointer w-full mt-4 px-4 py-2.5 rounded-md font-medium transition-colors text-black"
+          style={{ backgroundColor: "#00d4ff" }}
+        >
+          {t.rich("talkToAstrah", {
+            bold: (chunk) => <span className="font-semibold">{chunk}</span>,
+          })}
+        </button>
       </nav>
     </div>
   );

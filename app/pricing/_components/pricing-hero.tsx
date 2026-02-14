@@ -1,11 +1,26 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Dot } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const PricingHero = () => {
   const t = useTranslations("pricingPage.hero");
   const tHeader = useTranslations("header");
+  const router = useRouter();
+
+  const handleTalkClick = () => {
+    const chatbase =
+      typeof window !== "undefined" &&
+      (window as Window & { chatbase?: { open?: () => void } }).chatbase;
+    if (chatbase?.open) {
+      chatbase.open();
+      return;
+    }
+    router.push("/contact?intent=talk");
+  };
 
   return (
     <section className="section-container w-full font-sf-pro">
@@ -25,11 +40,12 @@ const PricingHero = () => {
             <Link href="/contact?intent=trial">{t("primaryCta")}</Link>
           </Button>
           <Button
+            type="button"
             variant="outline"
-            className=" border-white px-7  shadow-[inset_0_0px_20px_rgba(0,179,198,0.1)] font-sf-pro text-sm text-white/75 h-13.5 hover:border-primary rounded-md"
-            asChild
+            className="border-white px-7 shadow-[inset_0_0px_20px_rgba(0,179,198,0.1)] font-sf-pro text-sm text-white/75 h-13.5 hover:border-primary rounded-md"
+            onClick={handleTalkClick}
           >
-            <Link href="/contact?intent=talk"> {t("secondaryCta")}</Link>
+            {t("secondaryCta")}
           </Button>
         </div>
         <div className="text-muted-foreground mt-16">

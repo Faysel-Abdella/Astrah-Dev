@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/carousel";
 import AskAstrah from "@/components/ask-astrah";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { vi } from "date-fns/locale";
 
 const SystemModules = () => {
   const t = useTranslations("landing.SystemModules");
@@ -39,6 +40,7 @@ const SystemModules = () => {
       title: t("modules.whatsapp.title"),
       buttonTitle: t("modules.whatsapp.buttonTitle"),
       description: t("modules.whatsapp.description"),
+      smallDesc: t("modules.whatsapp.smallDesc"),
       output: {
         Icon: TriangleAlert,
         title: t("modules.whatsapp.output.title"),
@@ -239,6 +241,12 @@ const SystemModules = () => {
             <div className="">
               <p className="text-2xl font-medium">{visibleModule.title}</p>
               <p className="text-white/60 mt-6">{visibleModule.description}</p>
+              {/* Only if the id is 1 add this micro micro-feature row / bullet. */}
+              {visibleModule.id === 1 && (
+                <p className="text-white/60 mt-4 flex items-start gap-2">
+                  {visibleModule.smallDesc}
+                </p>
+              )}
               <div className="mt-14">
                 {typeof visibleModule.output == "string" ? (
                   <AskAstrah placeholder={visibleModule.output} />

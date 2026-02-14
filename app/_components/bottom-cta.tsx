@@ -1,10 +1,24 @@
+"use client";
+
 import React from "react";
 import { Button } from "../../components/ui/button";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const BottomCTA = () => {
   const t = useTranslations("landing.bottomCta");
+  const router = useRouter();
+
+  const handleTalkClick = () => {
+    const chatbase =
+      typeof window !== "undefined" &&
+      (window as Window & { chatbase?: { open?: () => void } }).chatbase;
+    if (chatbase?.open) {
+      chatbase.open();
+      return;
+    }
+    router.push("/contact?intent=talk");
+  };
 
   return (
     <section className="w-full  font-sf-pro">
@@ -16,10 +30,12 @@ const BottomCTA = () => {
           <p className="text-muted-foreground mt-6 max-w-xl ">
             {t("description")}
           </p>
-          <Button className="mt-8   h-11.5 px-7" asChild>
-            <Link href="/contact?intent=talk">
-              {t("talkTo")} <span className="font-bold">{t("brand")}</span>
-            </Link>
+          <Button
+            type="button"
+            className="mt-8 h-11.5 px-7"
+            onClick={handleTalkClick}
+          >
+            {t("talkTo")} <span className="font-bold">{t("brand")}</span>
           </Button>
           <div className="  w-1/3 -top-20 blur-[100px]  rounded-full absolute h-40 bg-white/20"></div>
         </div>

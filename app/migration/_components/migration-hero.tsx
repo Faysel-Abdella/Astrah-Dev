@@ -1,13 +1,27 @@
+"use client";
+
 import ScrollToButton from "@/components/scroll-to-button";
 import { Button } from "@/components/ui/button";
 import { Dot } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const MigrationHero = () => {
   const t = useTranslations("migration.hero");
   const tHeader = useTranslations("header");
+  const router = useRouter();
+
+  const handleTalkClick = () => {
+    const chatbase =
+      typeof window !== "undefined" &&
+      (window as Window & { chatbase?: { open?: () => void } }).chatbase;
+    if (chatbase?.open) {
+      chatbase.open();
+      return;
+    }
+    router.push("/contact?intent=talk");
+  };
 
   return (
     <section className="section-container flex gap-10 flex-col  ">
@@ -23,12 +37,14 @@ const MigrationHero = () => {
         </p>
         <p className="text-muted-foreground  max-w-xl ">{t("description-2")}</p>
         <div className="flex mt-10 gap-5 ">
-          <Button className="   h-13.5 sm:px-7" asChild>
-            <Link href="/contact?intent=talk">
-              {tHeader.rich("talkToAstrah", {
-                bold: (chunks) => <span className="font-bold">{chunks}</span>,
-              })}
-            </Link>
+          <Button
+            type="button"
+            className="h-13.5 sm:px-7"
+            onClick={handleTalkClick}
+          >
+            {tHeader.rich("talkToAstrah", {
+              bold: (chunks) => <span className="font-bold">{chunks}</span>,
+            })}
           </Button>
           <Button
             variant="outline"

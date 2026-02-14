@@ -2,11 +2,23 @@
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import OrbVideo from "./orb-video";
 
 export default function HeroSection() {
   const t = useTranslations("landing.hero");
+  const router = useRouter();
+
+  const handleTalkClick = () => {
+    const chatbase =
+      typeof window !== "undefined" &&
+      (window as Window & { chatbase?: { open?: () => void } }).chatbase;
+    if (chatbase?.open) {
+      chatbase.open();
+      return;
+    }
+    router.push("/contact?intent=talk");
+  };
 
   return (
     <section className="section-container mb-0 relative  pt-34 md:pt-40   lg:min-h-screen flex flex-col md:flex-row md:items-center overflow-hidden bg-background">
@@ -56,18 +68,16 @@ export default function HeroSection() {
             </div>
 
             {/* CTA Button */}
-            <Link href={"/contact?intent=talk"} className="w-fit mt-16">
-              <button
-                className="cursor-pointer inline-block px-7 py-4  rounded-lg   text-black md:border-0 transition-all hover:opacity-90 w-fit  "
-                style={{ backgroundColor: "#00B3C6" }}
-              >
-                {t.rich("buttonText", {
-                  bold: (chunk) => (
-                    <span className="font-semibold">{chunk}</span>
-                  ),
-                })}
-              </button>
-            </Link>
+            <button
+              type="button"
+              onClick={handleTalkClick}
+              className="cursor-pointer inline-block px-7 py-4 rounded-lg text-black md:border-0 transition-all hover:opacity-90 w-fit mt-16"
+              style={{ backgroundColor: "#00B3C6" }}
+            >
+              {t.rich("buttonText", {
+                bold: (chunk) => <span className="font-semibold">{chunk}</span>,
+              })}
+            </button>
           </div>
 
           {/* Right visual - anchored bottom-right */}

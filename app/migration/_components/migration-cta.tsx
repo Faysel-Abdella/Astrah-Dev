@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { get } from "http";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 const MigrationCTA = () => {
   const t = useTranslations("migration.cta");
+  const getHelp = useTranslations("landing.migration");
   const tHeader = useTranslations("header");
 
   return (
@@ -19,9 +21,7 @@ const MigrationCTA = () => {
           <div className="flex mt-10 gap-5 ">
             <Button className="   h-13.5 px-7" asChild>
               <Link href="/contact?intent=talk">
-                {tHeader.rich("talkToAstrah", {
-                  bold: (chunks) => <span className="font-bold">{chunks}</span>,
-                })}
+                {getHelp("getHelp")}
               </Link>
             </Button>
             <Button

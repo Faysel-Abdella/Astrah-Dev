@@ -199,3 +199,13 @@ input:-webkit-autofill:active {
     text-wrap: balance;
   }
 }
+
+iframe[title="Chatbot"] {
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(34, 211, 238, 0.18) !important;
+  box-shadow:
+    0 0 0 1px rgba(34, 211, 238, 0.08),
+    0 20px 70px rgba(0, 0, 0, 0.55) !important;
+  background: #0b0f17 !important;
+}
