@@ -45,7 +45,7 @@ export default function RegionalFitSection() {
                 key={feature.id}
                 className="flex break-inside-avoid flex-col gap-6 py-5 px-10.5  items-center"
                 outerClassName="mb-6 h-full flex-1 flex "
-                glowDirection={"top"}
+                glowDirection={index == 0 || index == 3 ? "top" : "bottom"}
               >
                 <StyledIcon Icon={feature.icon} />
                 <p className="text-muted-foreground text-center max-w-68">
